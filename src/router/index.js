@@ -1,23 +1,34 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-
-import Beranda from '@/components/Beranda'
-
-import Hello from '@/components/Hello'
+import Home from '@/components/Home'
+import About from '@/components/About'
+import Jobs from '@/components/Jobs'
+import Tracks from '@/components/Tracks'
 
 Vue.use(Router)
 
 export default new Router({
+  mode: 'history',
   routes: [
     {
       path: '/',
-      name: 'Beranda',
-      component: Beranda
+      name: 'Home',
+      component: Home
     },
     {
-      path: '/hello',
-      name: 'Hello',
-      component: Hello
+      path: '/About',
+      name: 'About',
+      component: About
+    },
+    {
+      path: '/Jobs',
+      name: 'Jobs',
+      component: Jobs
+    },
+    {
+      path: '/Tracks',
+      name: 'Tracks',
+      component: Tracks
     }
   ]
 })

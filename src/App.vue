@@ -1,33 +1,56 @@
 <link rel='stylesheet' href='./assets/css.css'></link>
 <template>
-<div>
-  <nav class="navbar navbar-default navbar-fixed-top">
-                  <div class="container">
-                      <div class="navbar-header">
-                          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                              <span class="icon-bar"></span>
-                              <span class="icon-bar"></span>
-                              <span class="icon-bar"></span>
-                          </button>
-                            <img class="logo" src="./assets/New-Blibli-Logo.png" alt=""/>
-                           <router-link activeclass="active" to="/Navbar">a</router-link>
-                         
-                      </div>
-                      <div class="collapse navbar-collapse" id="myNavbar">
-                          <ul class="nav navbar-nav navbar-right">
-                              <li><router-link activeclass="active" to="#/home" data-target="#home">HOME</router-link></li>
-                              <li><router-link activeclass="active" to="#/about" data-target="#about">ABOUT</router-link></li>
-                              <li><router-link activeclass="active" to="#/jobs" data-target="#jobs">JOBS</router-link></li>
-                              <li><router-link activeclass="active" to="#/track" data-target="#track">TRACK</router-link></li>
-                          </ul>
-                      </div>
-                  </div>
-              </nav>
-</div>
+  <div id="app">
+
+    <NavBar></NavBar>
+    <!-- <img src="./assets/logo.png"> -->
+    <router-view></router-view>
+  </div>
 </template>
 
 <script>
+
+import NavBar from './components/NavBar'
+
 export default {
-  name: 'app'
+  name: 'app',
+  components: {
+    NavBar
+  }
 }
 </script>
+
+<style>
+#app {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 0px;
+}
+
+.navbar-fixed-left {
+  margin-top: -20px;
+  width: 140px;
+  position: fixed;
+  border-radius: 0;
+  height: 100%;
+}
+
+.navbar-fixed-left .navbar-nav > li {
+  float: none;  /* Cancel default li float: left */
+  width: 139px;
+}
+
+.navbar-fixed-left + .container {
+  padding-left: 160px;
+}
+
+/* On using dropdown menu (To right shift popuped) */
+.navbar-fixed-left .navbar-nav > li > .dropdown-menu {
+  margin-top: -50px;
+  margin-left: 140px;
+}
+
+</style>
