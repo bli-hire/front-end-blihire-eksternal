@@ -1,4 +1,4 @@
-<link rel='stylesheet' href='./assets/css.css'></link>
+
 <template>
   <div id="app">
 
@@ -21,6 +21,9 @@ export default {
 </script>
 
 <style>
+
+    @import "./assets/css.css";
+
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

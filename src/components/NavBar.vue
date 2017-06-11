@@ -8,9 +8,9 @@
                               <span class="icon-bar"></span>
                               <span class="icon-bar"></span>
                           </button>
-                          <img class logo v-bind:src="'../assets/New-Blibli-Logo'" rel="stylesheet"> 
+                          <!-- <img class logo v-bind:src="'../assets/New-Blibli-Logo'" rel="stylesheet">  -->
                          <!--  <img :src="'../assets/New-Blibli-Logo.png'"> -->
-
+                        <img class="logo" src="../assets/bliblilogo.png">
                       </div>
                       
                       <div class="collapse navbar-collapse" id="myNavbar">
@@ -54,7 +54,7 @@ export default {
   }
 }
 </script>
-<style>
+<style scoped>
 @media screen and (max-width: 480px) {
   .logo {
       font-size: 150px;

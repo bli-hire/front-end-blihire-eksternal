@@ -9,7 +9,6 @@
     <div class="jumbotron text-center">
       <br>
       <h1>You Can Make a Difference</h1>
-      <!-- <p>We specialize in blablabla</p> -->
       <div class="lookJob">
         <a href="#">Search for a job</a>
       </div>
@@ -69,7 +68,7 @@
           <li>Persistent and able to work under pressure</li>
         </ul>
         <div class="lookJob">
-          <a href="resume.html">Apply Now</a>
+            <li v-on:click="chStatePageToResume()"><router-link to="/Resume">Apply Now</router-link></li>
         </div>
       </div>
     </div>
@@ -98,7 +97,7 @@
             <li>Familiar with Linux</li>
           </ul>
           <div class="lookJob">
-            <a href="#">Apply Now</a>
+            <li v-on:click="chStatePageToResume()"><router-link to="/Resume">Apply Now</router-link></li>
           </div>
         </div>
       
@@ -125,10 +124,16 @@
 
 <script>
 export default {
-  name: 'Home',
+  name: 'NavBar',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      statePage: 'Home'
+    }
+  },
+  methods: {
+    chStatePageToResume () {
+      this.statePage = 'Resume'
+      console.log(this.statePage)
     }
   }
 }
@@ -137,7 +142,7 @@ export default {
 
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style lang="css" rel="../../static/css.css">
 
 
 h1, h2 {
