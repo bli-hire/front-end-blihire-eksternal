@@ -1,11 +1,10 @@
 <template>
+<div>
 
-  <div class="About">
-  <h1>.</h1>
-<h1>.</h1>
-    <h1>{{ msg }}</h1>
-    <router-view></router-view>
-  </div>
+
+ <router-view></router-view>
+</div>
+
 </template>
 
 <script>
@@ -13,14 +12,15 @@ export default {
   name: 'About',
   data () {
     return {
-      msg: 'Welcome to About'
+      statePage: 'About'
     }
   }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style>
+
 h1, h2 {
   font-weight: normal;
 }

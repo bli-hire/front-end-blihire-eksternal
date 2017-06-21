@@ -23,6 +23,14 @@
                       </div>
                   </div>
               </nav>
+              
+    <div class="jumbotron text-center">
+      <br>
+      <h1>You Can Make a Difference</h1>
+      <div class="lookJob">
+        <a href="#">Search for a job</a>
+      </div>
+    </div>
 </div>
 </template>
 

@@ -5,6 +5,8 @@ import About from '@/components/About'
 import Jobs from '@/components/Jobs'
 import Tracks from '@/components/Tracks'
 import Resume from '@/components/Resume'
+import Alert from '@/components/Alert'
+import TracksStatus from '@/components/TracksStatus'
 
 Vue.use(Router)
 
@@ -35,6 +37,16 @@ export default new Router({
       path: '/Resume',
       name: 'Resume',
       component: Resume
+    },
+    {
+      path: '/Alert',
+      name: 'Alert',
+      component: Alert
+    },
+    {
+      path: '/TracksStatus',
+      name: 'TracksStatus',
+      component: TracksStatus
     }
   ]
 })

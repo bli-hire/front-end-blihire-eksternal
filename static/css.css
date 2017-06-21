@@ -496,7 +496,7 @@ span.round-tab:hover {
 }
 
 .wizard .nav-tabs > li {
-    width: 14%;
+    width: 12.7%;
 }
 
 .wizard li:after {
@@ -568,4 +568,7 @@ span.round-tab:hover {
         position: absolute;
         left: 35%;
     }
+}
+.textkiri {
+ text-align: left;
 }

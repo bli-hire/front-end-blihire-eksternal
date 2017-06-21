@@ -1,9 +1,20 @@
 <template>
 
   <div class="Tracks">
-  <h1>.</h1>
-<h1>.</h1>
-    <h1>{{ msg }}</h1>
+
+     <div class="container-fluid">
+          <div class="text-center">
+            <form class="container-stt">
+              <input type="email" class="form-control text-center" size="50" placeholder="Enter your UID here" required>
+              <br/>                   
+               <div class="btn btn-info">
+                   <router-link to="/TracksStatus">Track</router-link>
+                </div>
+            </form>
+          </div>
+      </div>
+ 
+
     <router-view></router-view>
   </div>
 </template>
