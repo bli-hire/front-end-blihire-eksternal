@@ -11,11 +11,11 @@
                             <li role="presentation" class="active">
                                 <a href="#step1" data-toggle="tab" aria-controls="step1" role="tab" title="Step 1">
                                     <span class="round-tab">
-                              <i class="glyphicon glyphicon-folder-open"></i>
-                          </span>
+                                         <i class="glyphicon glyphicon-folder-open"></i>
+                                    </span>
+
                                 </a>
                             </li>
-
                             <li role="presentation" class="disabled">
                                 <a href="#step2" data-toggle="tab" aria-controls="step2" role="tab" title="Step 2">
                                     <span class="round-tab">
@@ -72,7 +72,7 @@
                                     <div class="form-group">
                                         <label for="title">Title:</label>
                                         <div>
-                                            <select class="form-control" id="sel1">
+                                            <select class="form-control" id="sel1" v-model="title">
                                                 <option value="" disabled selected>Silahkan Pilih</option>
                                                 <option>Professionals</option>
                                                 <option>Students and Graduates</option>
@@ -82,7 +82,7 @@
                                     <div class="form-group">
                                         <label for="pwd">Job Title:</label>
                                         <div>
-                                            <select class="form-control" id="sel2">
+                                            <select class="form-control" id="sel2" v-model="jobTitle">
                                                 <option value="" disabled selected>Silahkan Pilih</option>
                                                 <option value="Talent Acquisition Specialist">Talent Acquisition Specialist</option>
                                                 <option value="Sr. System Development Engineer">Sr. System Development Engineer</option>
@@ -103,38 +103,42 @@
                                     <div class="form-group">
                                         <label for="nama">Nama Lengkap (Full Name) :</label>
                                         <div>
-                                            <input type="text" class="form-control" id="nama" placeholder="Nama Lengkap (Full Name)">
+                                            <input type="text" class="form-control" id="nama" v-model="fullName" placeholder="Nama Lengkap (Full Name)">
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label for="ttl">Tempat/Tanggal Lahir (Place/ Date of Birth :)</label>
                                         <div>
-                                            <input type="text" class="form-control" id="ttl" placeholder="Tempat/Tanggal Lahir (Place/ Date of Birth :)">
+                                            <input type="text" class="form-control" id="ttl" v-model="placeDateOfBirth" placeholder="Tempat/Tanggal Lahir (Place/ Date of Birth :)">
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label for="noktp">No KTP (ID Card Number)</label>
                                         <div>
-                                            <input type="text" class="form-control" id="noktp" placeholder="No KTP (ID Card Number)">
+                                            <input type="text" class="form-control" id="noktp" v-model="idCardNumber" placeholder="No KTP (ID Card Number)">
                                         </div>
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="noktp">No KTP (ID Card Number)</label>
+                                        <label for="noktp">SIM (Driving License)</label>
                                         <div>
-                                            <input type="checkbox" name="vehicle" value="C">C
+                                            <input type="checkbox" id="C" v-model="drivingLicense" value="C">
+                                            <label for="C">C</label>
                                             <br>
-                                            <input type="checkbox" name="vehicle" value="A">A
+                                            <input type="checkbox" id="A" v-model="drivingLicense" value="A">
+                                            <label for="A">A</label>
                                             <br>
-                                            <input type="checkbox" name="vehicle" value="B1">B1
+                                            <input type="checkbox" id="B1" v-model="drivingLicense" value="B1">
+                                            <label for="B1">B1</label>
                                             <br>
+                                           <!--  <span>drivingLicense: {{ drivingLicense }}</span> -->
                                         </div>
                                     </div>
 
                                     <div class="form-group">
                                         <label for="email">Alamat Email/ (Email address:)</label>
                                         <div>
-                                            <input type="email" class="form-control" id="email" placeholder="Email">
+                                            <input type="email" class="form-control" id="email" v-model="emailAddress" placeholder="Email">
                                         </div>
                                     </div>
                                     <div class="form-group">
@@ -149,85 +153,89 @@
                                     <div class="form-group">
                                         <label for="twitter">Twitter</label>
                                         <div>
-                                            <input type="text" class="form-control" id="twitter" placeholder="Twitter">
+                                            <input type="text" class="form-control" id="twitter" v-model="twitter" placeholder="Twitter">
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label for="facebook">Facebook</label>
                                         <div>
-                                            <input type="text" class="form-control" id="facebook" placeholder="Facebook">
+                                            <input type="text" class="form-control" id="facebook" v-model="facebook" placeholder="Facebook">
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label for="LinkedIn">LinkedIn</label>
                                         <div>
-                                            <input type="text" class="form-control" id="LinkedIn" placeholder="LinkedIn">
+                                            <input type="text" class="form-control" id="LinkedIn" v-model="linkedIn" placeholder="LinkedIn">
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label for="Blog">Blog</label>
                                         <div>
-                                            <input type="text" class="form-control" id="Blog" placeholder="Blog">
+                                            <input type="text" class="form-control" id="Blog" v-model="blog" placeholder="Blog">
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label for="telp">Telp / (Handphone:)</label>
                                         <div>
-                                            <input type="text" class="form-control" id="telp" placeholder="087xxx">
+                                            <input type="text" class="form-control" id="telp" v-model="handphone" placeholder="087xxx">
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label for="agama">Agama / Religion:</label>
                                         <div>
-                                            <input type="text" class="form-control" id="agama" placeholder="Agama">
+                                            <input type="text" class="form-control" id="agama" v-model="religion" placeholder="Agama">
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label for="sukubangsa">Suku Bangsa</label>
                                         <div>
-                                            <input type="text" class="form-control" id="sukubangsa" placeholder="Suku Bangsa">
+                                            <input type="text" class="form-control" id="sukubangsa" v-model="ethnicty" placeholder="Suku Bangsa">
                                         </div>
                                     </div>
 
                                     <div class="form-group">
                                         <label for="statuspernikahan">Status Pernikahan</label>
                                         <div>
-                                            <input type="radio" name="gender" value="male"> Lajang (Single)
+                                            <input type="radio" id="Lajang" v-model="maritalStatus" value="Lajang">
+                                            <label for="Lajang">Lajang</label>
                                             <br>
-                                            <input type="radio" name="gender" value="female"> Menikah (Married)
+                                            <input type="radio" id="Menikah" v-model="maritalStatus" value="Menikah">
+                                            <label for="Menikah">Menikah</label>
                                             <br>
-                                            <input type="radio" name="gender" value="other"> Janda (Widow)
+                                            <input type="radio" id="Janda" v-model="maritalStatus" value="Janda">
+                                            <label for="Janda">Janda</label>
                                             <br>
-                                            <input type="radio" name="gender" value="other"> Duda (Widower)
+                                            <input type="radio" id="Duda" v-model="maritalStatus" value="other">
+                                            <label for="Duda">Duda</label>
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label for="alamatsaatini">Alamat Saat ini (Current Address)</label>
                                         <div>
-                                            <input type="text" class="form-control" id="alamatsaatini" placeholder="Alamat saat ini (Current Address)">
+                                            <input type="text" class="form-control" id="alamatsaatini" v-model="currentAddress" placeholder="Alamat saat ini (Current Address)">
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label for="alamatasal">Alamat Asal (Home Address)</label>
                                         <div>
-                                            <input type="text" class="form-control" id="alamatasal" placeholder="Alamat Asal">
+                                            <input type="text" class="form-control" id="alamatasal" v-model="homeAddress" placeholder="Alamat Asal">
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label for="teleponrumah">Telepon Rumah (Home Phone)</label>
                                         <div>
-                                            <input type="text" class="form-control" id="teleponrumah" placeholder="Telepon Rumah">
+                                            <input type="text" class="form-control" id="teleponrumah" v-model="homePhone" placeholder="Telepon Rumah">
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label for="kontakdarurat">Kontak Darurat/ Emergency Call</label>
                                         <div>
-                                            <input type="text" class="form-control" id="kontakdarurat" placeholder="Kontak Darurat (Emergency Call)">
+                                            <input type="text" class="form-control" id="kontakdarurat" v-model="emergencyCall" placeholder="Kontak Darurat (Emergency Call)">
                                         </div>
                                     </div>
                                     <ul class="list-inline pull-right">
                                         <li>
-                                            <button type="button" class="btn btn-primary next-step">Save and continue</button>
+                                            <button type="button" class="btn btn-primary next-step" v-on:click="inputcv()">Save and continue</button>
                                         </li>
                                     </ul>
 
@@ -1400,10 +1408,132 @@
 
 <script>
 export default {
-  name: 'Resume',
+  name: 'cv',
   data () {
     return {
-      msg: 'Welcome to Resume'
+      msg: 'cv',
+      fullName: '',
+      title: '',
+      jobTitle: '',
+      placeDateOfBirth: '',
+      idCardNumber: '',
+      drivingLicense: [],
+      emailAddress: '',
+      uploadCV: '',
+      twitter: '',
+      facebook: '',
+      linkedIn: '',
+      blog: '',
+      handphone: '',
+      religion: '',
+      ethnicty: '',
+      maritalStatus: '',
+      currentAddress: '',
+      homeAddress: '',
+      homePhone: '',
+      emergencyCall: '',
+      fatherName: '',
+      fatherBirthday: '',
+      fatherLatestEducation: '',
+      fatherCurrentJob: '',
+      motherName: '',
+      motherBirthday: '',
+      motherLatestEducation: '',
+      motherCurrentJob: '',
+      spouseName: '',
+      spousebirthDay: '',
+      spouseLatestEducation: '',
+      spouseCurrentJob: '',
+      responsibilities: '',
+      responsibilitiesType: '',
+      reasonMajor: '',
+      titleThesis: '',
+      nameOfOrganization: '',
+      fieldOfOrganization: '',
+      attendancePeriod: '',
+      notes: '',
+      achievement: '',
+      yearAchievement: '',
+      notesAchievement: '',
+      reasonInterestedInGDN: '',
+      reasonApplyOnThatPosition: '',
+      factorEncaurageYouOnThatJob: '',
+      kindOfEnvirontment: '',
+      lifeValue: '',
+      spesificSkill: '',
+      hobbies: '',
+      describeAboutYou: '',
+      placeGetInformationGDN: '',
+      relativeWorkingOnGDN: '',
+      haveAppliedOnGDN: '',
+      havePartTimeJob: '',
+      timeStartWork: '',
+      cv: null
+    }
+  },
+  methods: {
+    inputcv () {
+      var self = this
+      self.$http.post('http://localhost:7777/cv/add', {
+        fullName: self.fullName,
+        title: self.title,
+        jobTitle: self.jobTitle,
+        placeDateOfBirth: self.placeDateOfBirth,
+        idCardNumber: self.idCardNumber,
+        drivingLicense: self.drivingLicense,
+        emailAddress: self.emailAddress,
+        uploadCV: self.uploadCV,
+        twitter: self.twitter,
+        facebook: self.facebook,
+        linkedIn: self.linkedIn,
+        blog: self.blog,
+        homeAddress: self.homeAddress,
+        homePhone: self.homePhone,
+        handphone: self.handphone,
+        emergencyCall: self.emergencyCall,
+        ethnicty: self.ethnicty,
+        maritalStatus: self.maritalStatus,
+        religion: self.religion,
+        fatherName: self.fatherName,
+        fatherBirthday: self.fatherBirthday,
+        fatherLatestEducation: self.fatherLatestEducation,
+        fatherCurrentJob: self.fatherCurrentJob,
+        motherName: self.motherName,
+        motherBirthday: self.motherBirthday,
+        motherCurrentJob: self.motherCurrentJob,
+        motherLatestEducation: self.motherLatestEducation,
+        spouseName: self.spouseName,
+        spousebirthDay: self.spousebirthDay,
+        spouseCurrentJob: self.spouseCurrentJob,
+        spouseLatestEducation: self.spouseLatestEducation,
+        responsibilities: self.responsibilities,
+        responsibilitiesType: self.responsibilitiesType,
+        reasonMajor: self.reasonMajor,
+        titleThesis: self.titleThesis,
+        nameOfOrganization: self.nameOfOrganization,
+        fieldOfOrganization: self.fieldOfOrganization,
+        attendancePeriod: self.attendancePeriod,
+        notes: self.notes,
+        achievement: self.achievement,
+        yearAchievement: self.yearAchievement,
+        notesAchievement: self.notesAchievement,
+        reasonInterestedInGDN: self.reasonInterestedInGDN,
+        reasonApplyOnThatPosition: self.reasonApplyOnThatPosition,
+        factorEncaurageYouOnThatJob: self.factorEncaurageYouOnThatJob,
+        kindOfEnvirontment: self.kindOfEnvirontment,
+        lifeValue: self.lifeValue,
+        spesificSkill: self.spesificSkill,
+        hobbies: self.hobbies,
+        describeAboutYou: self.describeAboutYou,
+        placeGetInformationGDN: self.placeGetInformationGDN,
+        relativeWorkingOnGDN: self.relativeWorkingOnGDN,
+        haveAppliedOnGDN: self.haveAppliedOnGDN,
+        havePartTimeJob: self.havePartTimeJob,
+        timeStartWork: self.timeStartWork}, (json) => {
+          window.sessionStorage.setItem('cv', json)
+          this.cv = json
+          alert(this.cv)
+        })
     }
   }
 }
