@@ -101,9 +101,9 @@
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label for="nama">Nama Lengkap (Full Name) :</label>
+                                        <label for="namaLengkap">Nama Lengkap (Full Name) :</label>
                                         <div>
-                                            <input type="text" class="form-control" id="nama" v-model="fullName" placeholder="Nama Lengkap (Full Name)">
+                                            <input type="text" class="form-control" id="fullName" v-model="fullName" placeholder="Nama Lengkap (Full Name)">
                                         </div>
                                     </div>
                                     <div class="form-group">
@@ -235,7 +235,7 @@
                                     </div>
                                     <ul class="list-inline pull-right">
                                         <li>
-                                            <button type="button" class="btn btn-primary next-step" v-on:click="inputcv()">Save and continue</button>
+                                            <button type="button" class="btn btn-primary next-step">Save and continue</button>
                                         </li>
                                     </ul>
 
@@ -255,25 +255,25 @@
                                 <div class="form-group">
                                     <label for="namaayah">Nama (Name)</label>
                                     <div>
-                                        <input type="text" class="form-control" id="namaayah" placeholder="Nama (Name)">
+                                        <input type="text" class="form-control" id="namaayah" v-model="fatherName"placeholder="Nama (Name)">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="tanggallahirayah">Tanggal Lahir (Birthday)</label>
                                     <div>
-                                        <input type="text" class="form-control" id="tanggallahirayah" placeholder="Tanggal Lahir (Birthday)">
+                                        <input type="text" class="form-control" id="tanggallahirayah" v-model="fatherBirthday" placeholder="Tanggal Lahir (Birthday)">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="pendidikanterakhir">Pendidikan Terakhir (Latest Education)</label>
                                     <div>
-                                        <input type="text" class="form-control" id="pendidikanterakhir" placeholder="Pendidikan Terakhir (Latest Education)">
+                                        <input type="text" class="form-control" id="pendidikanterakhir" v-model="fatherLatestEducation" placeholder="Pendidikan Terakhir (Latest Education)">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="pekerjaan">Pekerjaan</label>
                                     <div>
-                                        <input type="text" class="form-control" id="pekerjaan" placeholder="Pekerjaan (Current Job)">
+                                        <input type="text" class="form-control" id="pekerjaan" v-model="fatherCurrentJob"placeholder="Pekerjaan (Current Job)">
                                     </div>
                                 </div>
 
@@ -286,25 +286,25 @@
                                 <div class="form-group">
                                     <label for="namaibu">Nama (Name)</label>
                                     <div>
-                                        <input type="text" class="form-control" id="namaibu" placeholder="Nama (Name)">
+                                        <input type="text" class="form-control" id="namaibu" v-model="motherName" placeholder="Nama (Name)">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="tanggallahiribu">Tanggal Lahir (Birthday)</label>
                                     <div>
-                                        <input type="text" class="form-control" id="tanggallahiribu" placeholder="Tanggal Lahir (Birthday)">
+                                        <input type="text" class="form-control" id="tanggallahiribu" v-model="motherBirthday" placeholder="Tanggal Lahir (Birthday)">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="pendidikanterakhir">Pendidikan Terakhir (Latest Education)</label>
                                     <div>
-                                        <input type="text" class="form-control" id="pendidikanterakhir" placeholder="Pendidikan Terakhir (Latest Education)">
+                                        <input type="text" class="form-control" id="pendidikanterakhir" v-model="motherLatestEducation" placeholder="Pendidikan Terakhir (Latest Education)">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="pekerjaan">Pekerjaan</label>
                                     <div>
-                                        <input type="text" class="form-control" id="pekerjaan" placeholder="Pekerjaan (Current Job)">
+                                        <input type="text" class="form-control" id="pekerjaan" v-model="motherCurrentJob" placeholder="Pekerjaan (Current Job)">
                                     </div>
                                 </div>
 
@@ -317,25 +317,25 @@
                                 <div class="form-group">
                                     <label for="namasaudara1">Nama (Name)</label>
                                     <div>
-                                        <input type="text" class="form-control" id="namasaudara1" placeholder="Nama (Name)">
+                                        <input type="text" class="form-control" id="namasaudara1" v-model="brothersName1" placeholder="Nama (Name)">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="tanggallahirsaudara1">Tanggal Lahir (Birthday)</label>
                                     <div>
-                                        <input type="text" class="form-control" id="tanggallahirsaudara1" placeholder="Tanggal Lahir (Birthday)">
+                                        <input type="text" class="form-control" id="tanggallahirsaudara1" v-model="brothersBirthday1" placeholder="Tanggal Lahir (Birthday)">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="pendidikanterakhirsaudara1">Pendidikan Terakhir (Latest Education)</label>
                                     <div>
-                                        <input type="text" class="form-control" id="pendidikanterakhirsaudara1" placeholder="Pendidikan Terakhir (Latest Education)">
+                                        <input type="text" class="form-control" id="pendidikanterakhirsaudara1" v-model="brotherLatestEducation1" placeholder="Pendidikan Terakhir (Latest Education)">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="pekerjaansaudara1">Pekerjaan</label>
                                     <div>
-                                        <input type="text" class="form-control" id="pekerjaansaudara1" placeholder="Pekerjaan (Current Job)">
+                                        <input type="text" class="form-control" id="pekerjaansaudara1" v-model="brotherCurrentJob1" placeholder="Pekerjaan (Current Job)">
                                     </div>
                                 </div>
 
@@ -348,25 +348,25 @@
                                 <div class="form-group">
                                     <label for="namasaudara2">Nama (Name)</label>
                                     <div>
-                                        <input type="text" class="form-control" id="namasaudara2" placeholder="Nama (Name)">
+                                        <input type="text" class="form-control" id="namasaudara2" v-model="brothersName2" placeholder="Nama (Name)">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="tanggallahirsaudara1">Tanggal Lahir (Birthday)</label>
                                     <div>
-                                        <input type="text" class="form-control" id="tanggallahirsaudara2" placeholder="Tanggal Lahir (Birthday)">
+                                        <input type="text" class="form-control" id="tanggallahirsaudara2" v-model="brothersBirthday2" placeholder="Tanggal Lahir (Birthday)">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="pendidikanterakhirsaudara2">Pendidikan Terakhir (Latest Education)</label>
                                     <div>
-                                        <input type="text" class="form-control" id="pendidikanterakhirsaudara2" placeholder="Pendidikan Terakhir (Latest Education)">
+                                        <input type="text" class="form-control" id="pendidikanterakhirsaudara2" v-model="brotherLatestEducation2" placeholder="Pendidikan Terakhir (Latest Education)">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="pekerjaansaudara2">Pekerjaan</label>
                                     <div>
-                                        <input type="text" class="form-control" id="pekerjaansaudara2" placeholder="Pekerjaan (Current Job)">
+                                        <input type="text" class="form-control" id="pekerjaansaudara2" v-model="brotherCurrentJob2" placeholder="Pekerjaan (Current Job)">
                                     </div>
                                 </div>
 
@@ -382,32 +382,32 @@
                                 <div class="form-group">
                                     <label for="namapasangan">Nama (Name)</label>
                                     <div>
-                                        <input type="text" class="form-control" id="namapasangan" placeholder="Nama (Name)">
+                                        <input type="text" class="form-control" id="namapasangan" v-model="spouseName"placeholder="Nama (Name)">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="tanggallahirpasangan">Tanggal Lahir (Birthday)</label>
                                     <div>
-                                        <input type="text" class="form-control" id="tanggallahirpasangan" placeholder="Tanggal Lahir (Birthday)">
+                                        <input type="text" class="form-control" id="tanggallahirpasangan" v-model="spousebirthDay" placeholder="Tanggal Lahir (Birthday)">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="pendidikanterakhirpasangan">Pendidikan Terakhir (Latest Education)</label>
                                     <div>
-                                        <input type="text" class="form-control" id="pendidikanterakhirpasangan" placeholder="Pendidikan Terakhir (Latest Education)">
+                                        <input type="text" class="form-control" id="pendidikanterakhirpasangan" v-model="spouseLatestEducation" placeholder="Pendidikan Terakhir (Latest Education)">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="pekerjaanpasangan">Pekerjaan</label>
                                     <div>
-                                        <input type="text" class="form-control" id="pekerjaanpasangan" placeholder="Pekerjaan (Current Job)">
+                                        <input type="text" class="form-control" id="pekerjaanpasangan" v-model="spouseCurrentJob" placeholder="Pekerjaan (Current Job)">
                                     </div>
                                 </div>
 
                                 <div class="form-group">
                                     <div>
 
-                                        <h3>Anak</h3>
+                                        <h3>Anak Pertama</h3>
 
                                     </div>
                                 </div>
@@ -415,39 +415,141 @@
                                 <div class="form-group">
                                     <label for="namaanak">Nama (Name)</label>
                                     <div>
-                                        <input type="text" class="form-control" id="namaanak" placeholder="Nama (Name)">
+                                        <input type="text" class="form-control" id="namaanak" v-model="childrenName1" placeholder="Nama (Name)">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="tanggallahiranak">Tanggal Lahir (Birthday)</label>
                                     <div>
-                                        <input type="text" class="form-control" id="tanggallahiranak" placeholder="Tanggal Lahir (Birthday)">
+                                        <input type="text" class="form-control" id="tanggallahiranak" v-model="childrenBirthday1" placeholder="Tanggal Lahir (Birthday)">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="pendidikanterakhiranak">Pendidikan Terakhir (Latest Education)</label>
                                     <div>
-                                        <input type="text" class="form-control" id="pendidikanterakhiranak" placeholder="Pendidikan Terakhir (Latest Education)">
+                                        <input type="text" class="form-control" id="pendidikanterakhiranak" v-model="childrenLatestEducation1" placeholder="Pendidikan Terakhir (Latest Education)">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="pekerjaananak">Pekerjaan</label>
                                     <div>
-                                        <input type="text" class="form-control" id="pekerjaananak" placeholder="Pekerjaan (Current Job)">
+                                        <input type="text" class="form-control" id="pekerjaananak" v-model="childrenCurrentJob1" placeholder="Pekerjaan (Current Job)">
+                                    </div>
+                                </div>
+                                 <h3>Anak Kedua</h3>
+                                 <div class="form-group">
+                                    <label for="namaanak">Nama (Name)</label>
+                                    <div>
+                                        <input type="text" class="form-control" id="namaanak" v-model="childrenName2" placeholder="Nama (Name)">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="tanggallahiranak">Tanggal Lahir (Birthday)</label>
+                                    <div>
+                                        <input type="text" class="form-control" id="tanggallahiranak" v-model="childrenBirthday2" placeholder="Tanggal Lahir (Birthday)">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="pendidikanterakhiranak">Pendidikan Terakhir (Latest Education)</label>
+                                    <div>
+                                        <input type="text" class="form-control" id="pendidikanterakhiranak" v-model="childrenLatestEducation1" placeholder="Pendidikan Terakhir (Latest Education)">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="pekerjaananak">Pekerjaan</label>
+                                    <div>
+                                        <input type="text" class="form-control" id="pekerjaananak" v-model="childrenCurrentJob1" placeholder="Pekerjaan (Current Job)">
                                     </div>
                                 </div>
 
+                                <h3>Anak Ketiga</h3>
+                                 <div class="form-group">
+                                    <label for="namaanak">Nama (Name)</label>
+                                    <div>
+                                        <input type="text" class="form-control" id="namaanak" v-model="childrenName3" placeholder="Nama (Name)">
+                                    </div>
+                                </div>
                                 <div class="form-group">
+                                    <label for="tanggallahiranak">Tanggal Lahir (Birthday)</label>
+                                    <div>
+                                        <input type="text" class="form-control" id="tanggallahiranak" v-model="childrenBirthday3" placeholder="Tanggal Lahir (Birthday)">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="pendidikanterakhiranak">Pendidikan Terakhir (Latest Education)</label>
+                                    <div>
+                                        <input type="text" class="form-control" id="pendidikanterakhiranak" v-model="childrenLatestEducation3" placeholder="Pendidikan Terakhir (Latest Education)">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="pekerjaananak">Pekerjaan</label>
+                                    <div>
+                                        <input type="text" class="form-control" id="pekerjaananak" v-model="childrenCurrentJob2" placeholder="Pekerjaan (Current Job)">
+                                    </div>
+                                </div>
+
+                                <h3>Anak Keempat</h3>
+                                 <div class="form-group">
+                                    <label for="namaanak">Nama (Name)</label>
+                                    <div>
+                                        <input type="text" class="form-control" id="namaanak" v-model="childrenName4" placeholder="Nama (Name)">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="tanggallahiranak">Tanggal Lahir (Birthday)</label>
+                                    <div>
+                                        <input type="text" class="form-control" id="tanggallahiranak" v-model="childrenBirthday4" placeholder="Tanggal Lahir (Birthday)">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="pendidikanterakhiranak">Pendidikan Terakhir (Latest Education)</label>
+                                    <div>
+                                        <input type="text" class="form-control" id="pendidikanterakhiranak" v-model="childrenLatestEducation4" placeholder="Pendidikan Terakhir (Latest Education)">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="pekerjaananak">Pekerjaan</label>
+                                    <div>
+                                        <input type="text" class="form-control" id="pekerjaananak" v-model="childrenCurrentJob4" placeholder="Pekerjaan (Current Job)">
+                                    </div>
+                                </div>
+                                <h3>Anak Kelima</h3>
+                                 <div class="form-group">
+                                    <label for="namaanak">Nama (Name)</label>
+                                    <div>
+                                        <input type="text" class="form-control" id="namaanak" v-model="childrenName5" placeholder="Nama (Name)">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="tanggallahiranak">Tanggal Lahir (Birthday)</label>
+                                    <div>
+                                        <input type="text" class="form-control" id="tanggallahiranak" v-model="childrenBirthday5" placeholder="Tanggal Lahir (Birthday)">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="pendidikanterakhiranak">Pendidikan Terakhir (Latest Education)</label>
+                                    <div>
+                                        <input type="text" class="form-control" id="pendidikanterakhiranak" v-model="childrenLatestEducation5" placeholder="Pendidikan Terakhir (Latest Education)">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="pekerjaananak">Pekerjaan</label>
+                                    <div>
+                                        <input type="text" class="form-control" id="pekerjaananak" v-model="childrenCurrentJob5" placeholder="Pekerjaan (Current Job)">
+                                    </div>
+                                </div>
+
+                                 <div class="form-group">
                                     <label for="">Apakah saat ini Anda memiliki tanggungan selain anak dan istri ?</label>
                                     <div>
 
-                                        <textarea class="form-control" rows="5" id="comment" placeholder="Ya, Sebutkan"></textarea>
+                                        <textarea class="form-control" rows="5" id="comment" v-model="responsibilities" placeholder="Ya, Sebutkan"></textarea>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="">Bentuk tanggungan ?</label>
                                     <div>
-                                        <input type="text" class="form-control" id="">
+                                        <input type="text" class="form-control" v-model="responsibilitiesType" id="">
                                     </div>
                                 </div>
 
@@ -471,33 +573,33 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="">Sekolah/Perguruan Tinggi (School/University)</label>
+                                    <label for="">Sekolah(School)</label>
                                     <div>
-                                        <input type="text" class="form-control" id="">
+                                        <input type="text" class="form-control" v-model="univName">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="">Jurusan (Major)</label>
                                     <div>
-                                        <input type="text" class="form-control" id="">
+                                        <input type="text" class="form-control" v-model="univMajor">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="">Kota (City)</label>
                                     <div>
-                                        <input type="text" class="form-control" id="">
+                                        <input type="text" class="form-control" v-model="univCity">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="">Periode (Periode)</label>
                                     <div>
-                                        <input type="text" class="form-control" id="">
+                                        <input type="text" class="form-control" v-model="univPeriode">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="">IPK (GPA)</label>
                                     <div>
-                                        <input type="text" class="form-control" id="">
+                                        <input type="text" class="form-control" v-model="univGPA">
                                     </div>
                                 </div>
 
@@ -508,33 +610,33 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="">Sekolah/Perguruan Tinggi (School/University)</label>
+                                    <label for="">Perguruan Tinggi (University)</label>
                                     <div>
-                                        <input type="text" class="form-control" id="">
+                                        <input type="text" class="form-control" v-model="univNameDip">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="">Jurusan (Major)</label>
                                     <div>
-                                        <input type="text" class="form-control" id="">
+                                        <input type="text" class="form-control" v-model="MajorDip">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="">Kota (City)</label>
                                     <div>
-                                        <input type="text" class="form-control" id="">
+                                        <input type="text" class="form-control" v-model="cityDip">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="">Periode (Periode)</label>
                                     <div>
-                                        <input type="text" class="form-control" id="">
+                                        <input type="text" class="form-control" v-model="periodeDip">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="">IPK (GPA)</label>
                                     <div>
-                                        <input type="text" class="form-control" id="">
+                                        <input type="text" class="form-control" v-model="gpaDip">
                                     </div>
                                 </div>
 
@@ -545,33 +647,33 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="">Sekolah/Perguruan Tinggi (School/University)</label>
+                                    <label for="">Perguruan Tinggi (University)</label>
                                     <div>
-                                        <input type="text" class="form-control" id="">
+                                        <input type="text" class="form-control" v-model="univNameS1">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="">Jurusan (Major)</label>
                                     <div>
-                                        <input type="text" class="form-control" id="">
+                                        <input type="text" class="form-control" v-model="majorS1">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="">Kota (City)</label>
                                     <div>
-                                        <input type="text" class="form-control" id="">
+                                        <input type="text" class="form-control" v-model="cityS1">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="">Periode (Periode)</label>
                                     <div>
-                                        <input type="text" class="form-control" id="">
+                                        <input type="text" class="form-control" v-model="periodeS1">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="">IPK (GPA)</label>
                                     <div>
-                                        <input type="text" class="form-control" id="">
+                                        <input type="text" class="form-control" v-model="gpaS1">
                                     </div>
                                 </div>
 
@@ -582,40 +684,40 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="">Sekolah/Perguruan Tinggi (School/University)</label>
+                                    <label for="">Perguruan Tinggi (University)</label>
                                     <div>
-                                        <input type="text" class="form-control" id="">
+                                        <input type="text" class="form-control" v-model="univNameS2">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="">Jurusan (Major)</label>
                                     <div>
-                                        <input type="text" class="form-control" id="">
+                                        <input type="text" class="form-control" v-model="majorS2">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="">Kota (City)</label>
                                     <div>
-                                        <input type="text" class="form-control" id="">
+                                        <input type="text" class="form-control" v-model="cityS2">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="">Periode (Periode)</label>
                                     <div>
-                                        <input type="text" class="form-control" id="">
+                                        <input type="text" class="form-control" v-model="periodeS2">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="">IPK (GPA)</label>
                                     <div>
-                                        <input type="text" class="form-control" id="">
+                                        <input type="text" class="form-control" v-model="gpaS2">
                                     </div>
                                 </div>
 
                                 <div class="form-group">
                                     <label for=""> Apa alasan Anda memilih jurusan pada Perguruan Tinggi tersebut? (What’s the reason you chose that major?)</label>
                                     <div>
-                                        <textarea class="form-control" rows="5" id="alasan"></textarea>
+                                        <textarea class="form-control" rows="5" id="alasan" v-model="reasonMajor"></textarea>
                                     </div>
                                 </div>
                                 <br>
@@ -623,7 +725,7 @@
                                 <div class="form-group">
                                     <label for=""> Apa judul karya tulis ilmiah/skripsi/thesis Anda? (What’s the title of your final paper or thesis?)</label>
                                     <div>
-                                        <textarea class="form-control" rows="5" id="jdlskripsi"></textarea>
+                                        <textarea class="form-control" rows="5" id="jdlskripsi" v-model="titleThesis"></textarea>
                                     </div>
                                 </div>
 
@@ -636,21 +738,20 @@
                                 <div class="form-group">
                                     <label for="">Nama Kursus atau Pelatihan Name of Course or Training</label>
                                     <div>
-                                        <input type="text" class="form-control" id="">
+                                        <input type="text" class="form-control">
                                     </div>
                                 </div>
 
                                 <div class="form-group">
                                     <label for="">Penyelenggara Organizer</label>
                                     <div>
-                                        <input type="text" class="form-control" id="">
+                                        <input type="text" class="form-control">
                                     </div>
                                 </div>
 
                                 <div class="form-group">
                                     <label for="">Tahun Year</label>
                                     <div>
-
                                         <select name="tahun">
                                             <option value="">1996</option>
                                             <option value="">1997</option>
@@ -822,6 +923,39 @@
                                     </div>
                                 </div>
 
+                                <div class="form-group">
+                                    <label for="">Tahun Year</label>
+                                    <div>
+
+                                        <select name="tahun">
+                                            <option value="">1996</option>
+                                            <option value="">1997</option>
+                                            <option value="">1998</option>
+                                            <option value="">1999</option>
+                                            <option value="">2000</option>
+                                            <option value="">2001</option>
+                                            <option value="">2002</option>
+                                            <option value="">2003</option>
+                                            <option value="">2004</option>
+                                            <option value="">2005</option>
+                                            <option value="">2006</option>
+                                            <option value="">2007</option>
+                                            <option value="">2008</option>
+                                            <option value="">2009</option>
+                                            <option value="">2010</option>
+                                            <option value="">2011</option>
+                                            <option value="">2012</option>
+                                            <option value="">2013</option>
+                                            <option value="">2014</option>
+                                            <option value="">2015</option>
+                                            <option value="">2016</option>
+                                            <option value="">2017</option>
+                                        </select>
+                                        <br>
+                                        <br>
+
+                                    </div>
+                                </div>
                                 <div class="form-group">
                                     <label for="">Keterangan Notes</label>
                                     <div>
@@ -1022,12 +1156,12 @@
                                 <div class="form-group">
                                     <label for="">Bahasa Inggris</label>
                                     <div>
-                                        <label for="">Lisan Spoken</label>
+                                        <label for="">Lisan Spoken</label><br/>
                                         <input type="checkbox" name="vehicle" value="">Active
                                         <br>
                                         <input type="checkbox" name="vehicle" value="">Passive
-                                        <br>
-                                        <label for="">Tulisan Written</label>
+                                        <br/><br/>
+                                        <label for="">Tulisan Written</label><br/>
                                         <input type="checkbox" name="vehicle" value="">Active
                                         <br>
                                         <input type="checkbox" name="vehicle" value="">Passive
@@ -1036,10 +1170,10 @@
                                 </div>
 
                                 <div class="form-group">
-                                    <label for="">Bahasa</label>
+                                    <label for="">Bahasa</label><br/>
                                     <div>
                                         <input type="text" class="form-control" id="">
-                                        <label for="">Lisan Spoken</label>
+                                        <label for="">Lisan Spoken</label><br/>
                                         <input type="checkbox" name="vehicle" value="">Active
                                         <br>
                                         <input type="checkbox" name="vehicle" value="">Passive
@@ -1050,7 +1184,7 @@
                                     <label for="">Bahasa</label>
                                     <div>
                                         <input type="text" class="form-control" id="">
-                                        <label for="">Lisan Spoken</label>
+                                        <label for="">Lisan Spoken</label><br/>
                                         <input type="checkbox" name="vehicle" value="">Active
                                         <br>
                                         <input type="checkbox" name="vehicle" value="">Passive
@@ -1268,56 +1402,56 @@
                                 <div class="form-group">
                                     <label class="control-label col-sm-10" for="">Mengapa Anda berminat bekerja di PT. Global Digital Niaga (blibli.com)? Why are you interested in working at PT. Global Digital Niaga (blibli.com)?</label>
                                     <div class="form-essay col-sm-12">
-                                        <textarea class="control-label form-control" rows="5" id=""></textarea>
+                                        <textarea class="control-label form-control" rows="5" v-model="reasonInterestedInGDN" id=""></textarea>
                                     </div>
                                 </div>
 
                                 <div class="form-group">
                                     <label class="question-form-essay col-sm-9" for="">Mengapa Anda ingin bekerja pada jabatan yang Anda lamar? Why do you want to work in the position that you are applying?</label>
                                     <div class="form-essay col-sm-12">
-                                        <textarea class="control-label form-control" rows="5" id=""></textarea>
+                                        <textarea class="control-label form-control" rows="5" id="" v-model="reasonApplyOnThatPosition"></textarea>
                                     </div>
                                 </div>
 
                                 <div class="form-group">
                                     <label class="question-form-essay col-sm-9" for="">Faktor apa yang akan mendorong Anda untuk bertahan dalam suatu pekerjaan? What factors would encourage you to stay on the job?</label>
                                     <div class="form-essay col-sm-12">
-                                        <textarea class="control-label form-control" rows="5" id=""></textarea>
+                                        <textarea class="control-label form-control" rows="5" id="" v-model="factorEncaurageYouOnThatJob"></textarea>
                                     </div>
                                 </div>
 
                                 <div class="form-group">
                                     <label class="question-form-essay col-sm-9" for="">Lingkungan kerja seperti apa yang Anda harapkan? What kind of work environment do you expect?</label>
                                     <div class="form-essay col-sm-12">
-                                        <textarea class="control-label form-control" rows="5" id=""></textarea>
+                                        <textarea class="control-label form-control" rows="5" id="" v-model="kindOfEnvirontment"></textarea>
                                     </div>
                                 </div>
 
                                 <div class="form-group">
                                     <label class="question-form-essay col-sm-9" for=""> Tuliskan value hidup anda! Please write down your life value!</label>
                                     <div class="form-essay col-sm-12">
-                                        <textarea class="control-label form-control" rows="5" id=""></textarea>
+                                        <textarea class="control-label form-control" rows="5" id="" v-model="lifeValue"></textarea>
                                     </div>
                                 </div>
 
                                 <div class="form-group">
                                     <label class="question-form-essay col-sm-9" for="">Sebutkan keterampilan khusus yang Anda miliki! Please mention some specific skills that you have!</label>
                                     <div class="form-essay col-sm-12">
-                                        <textarea class="control-label form-control" rows="5" id=""></textarea>
+                                        <textarea class="control-label form-control" rows="5" id="" v-model="spesificSkill"></textarea>
                                     </div>
                                 </div>
 
                                 <div class="form-group">
                                     <label class="question-form-essay col-sm-9" for="">Sebutkan hobi / kegemaran Anda! Please mention your hobbies/interest!</label>
                                     <div class="form-essay col-sm-12">
-                                        <textarea class="control-label form-control" rows="5" id=""></textarea>
+                                        <textarea class="control-label form-control" rows="5" id="" v-model="hobbies"></textarea>
                                     </div>
                                 </div>
 
                                 <div class="form-group">
                                     <label class="question-form-essay col-sm-9" for="">Deskripsikan informasi lain mengenai diri Anda pada kolom ini! Contoh : kepribadian Anda, ciri khas Anda atau apapun tentang diri Anda yang perlu kami tahu. Please describe another information about you Ex: your personality, your characteristic, or anything that we need to know.</label>
                                     <div class="form-essay col-sm-12">
-                                        <textarea class="control-label form-control" rows="9" id=""></textarea>
+                                        <textarea class="control-label form-control" rows="9" id="" v-model="describeAboutYou"></textarea>
                                     </div>
                                 </div>
                                 <ul class="list-inline pull-right">
@@ -1339,34 +1473,34 @@
                                 <div class="form-group">
                                     <label class="question-form-essay col-sm-9" for="">Dimana Anda memperoleh informasi mengenai lowongan pekerjaan di PT. Global Digital Niaga (blibli.com)? Where did you find the information about job vacancies at PT. Global Digital Niaga (blibli.com)?</label>
                                     <div class="form-essay col-sm-12">
-                                        <textarea class="control-label form-control" rows="5" id=""></textarea>
+                                        <textarea class="control-label form-control" rows="5" id="" v-model="placeGetInformationGDN"></textarea>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="question-form-essay col-sm-9" for="">Apakah Anda memiliki keluarga, kerabat, atau teman yang bekerja di PT. Global Digital Niaga (blibli.com)? Sebutkan! Do you have any relatives working in PT. Global Digital Niaga (blibli.com)? Please mention!</label>
                                     <div class="form-essay col-sm-12">
-                                        <textarea class="control-label form-control" rows="5" id=""></textarea>
+                                        <textarea class="control-label form-control" rows="5" id="" v-model="relativeWorkingOnGDN"></textarea>
                                     </div>
                                 </div>
 
                                 <div class="form-group">
                                     <label class="question-form-essay col-sm-9" for="">Apakah Anda pernah melamar ke PT. Global Digital Niaga (blibli.com) sebelumnya? Jika ya, kapan dan untuk posisi apa? Have you applied for any employment in PT. Global Digital Niaga (blibli.com) before? If yes, when and what position?</label>
                                     <div class="form-essay col-sm-12">
-                                        <textarea class="control-label form-control" rows="5" id=""></textarea>
+                                        <textarea class="control-label form-control" rows="5" id="" v-model="haveAppliedOnGDN"></textarea>
                                     </div>
                                 </div>
 
                                 <div class="form-group">
                                     <label class="question-form-essay col-sm-9" for=""> Apakah Anda memiliki pekerjaan sampingan/part time? Sebutkan! Do you have any other jobs/part time job now? Please mention!</label>
                                     <div class="form-essay col-sm-12">
-                                        <textarea class="control-label form-control" rows="5" id=""></textarea>
+                                        <textarea class="control-label form-control" rows="5" id="" v-model="havePartTimeJob"></textarea>
                                     </div>
                                 </div>
 
                                 <div class="form-group">
                                     <label class="question-form-essay col-sm-9" for=""> Jika Anda diterima, kapan Anda dapat mulai bekerja? If you are accepted, when can you start to work?</label>
                                     <div class="form-essay col-sm-12">
-                                        <textarea class="control-label form-control" rows="5" id=""></textarea>
+                                        <textarea class="control-label form-control" rows="5" id="" v-model="timeStartWork"></textarea>
                                     </div>
                                 </div>
 
@@ -1386,7 +1520,7 @@
                                 </div>
 
                             </div>
-                            <div class="tab-pane" role="tabpanel" id="complete">
+                            <div class="tab-pane" role="tabpanel" id="complete" v-on:click="inputcv()">
                                 <h3>Complete</h3>
                                 <p>You have successfully completed all steps.</p>
                                  <div class="btn btn-primary btn-info-full next-step">
@@ -1468,12 +1602,49 @@ export default {
       haveAppliedOnGDN: '',
       havePartTimeJob: '',
       timeStartWork: '',
-      cv: null
+      cv: null,
+      brothers: [],
+      children: []
     }
   },
   methods: {
     inputcv () {
       var self = this
+      var bros = [{'brothersName': self.brothersName1,
+        'brothersBirthday': self.brothersBirthday1,
+        'brotherLatestEducation': self.brotherLatestEducation1,
+        'brotherCurrentJob': self.brotherCurrentJob1 },
+      {
+        'brothersName': self.brothersName2,
+        'brothersBirthday': self.brothersBirthday2,
+        'brotherLatestEducation': self.brotherLatestEducation2,
+        'brotherCurrentJob': self.brotherCurrentJob2
+      }]
+      var chil = [{'childrenName': self.childrenName1,
+        'childrenBirthday': self.childrenBirthday1,
+        'childrenLatestEducation': self.childrenLatestEducation1,
+        'childrenCurrentJob': self.childrenCurrentJob1
+      }, {
+        'childrenName': self.childrenName2,
+        'childrenBirthday': self.childrenBirthday2,
+        'childrenLatestEducation': self.childrenLatestEducation2,
+        'childrenCurrentJob': self.childrenCurrentJob2
+      }, {
+        'childrenName': self.childrenName3,
+        'childrenBirthday': self.childrenBirthday3,
+        'childrenLatestEducation': self.childrenLatestEducation3,
+        'childrenCurrentJob': self.childrenCurrentJob3
+      }, {
+        'childrenName': self.childrenName4,
+        'childrenBirthday': self.childrenBirthday4,
+        'childrenLatestEducation': self.childrenLatestEducation4,
+        'childrenCurrentJob': self.childrenCurrentJob4
+      }, {
+        'childrenName': self.childrenName5,
+        'childrenBirthday': self.childrenBirthday5,
+        'childrenLatestEducation': self.childrenLatestEducation5,
+        'childrenCurrentJob': self.childrenCurrentJob5
+      }]
       self.$http.post('http://localhost:7777/cv/add', {
         fullName: self.fullName,
         title: self.title,
@@ -1529,7 +1700,8 @@ export default {
         relativeWorkingOnGDN: self.relativeWorkingOnGDN,
         haveAppliedOnGDN: self.haveAppliedOnGDN,
         havePartTimeJob: self.havePartTimeJob,
-        timeStartWork: self.timeStartWork}, (json) => {
+        timeStartWork: self.timeStartWork,
+        bro: bros}, (json) => {
           window.sessionStorage.setItem('cv', json)
           this.cv = json
           alert(this.cv)
