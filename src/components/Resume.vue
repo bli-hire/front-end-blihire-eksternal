@@ -189,7 +189,7 @@
                                     <div class="form-group">
                                         <label for="sukubangsa">Suku Bangsa</label>
                                         <div>
-                                            <input type="text" class="form-control" id="sukubangsa" v-model="ethnicty" placeholder="Suku Bangsa">
+                                            <input type="text" class="form-control" id="sukubangsa" v-model="ethnicity" placeholder="Suku Bangsa">
                                         </div>
                                     </div>
 
@@ -575,31 +575,31 @@
                                 <div class="form-group">
                                     <label for="">Sekolah(School)</label>
                                     <div>
-                                        <input type="text" class="form-control" v-model="univName">
+                                        <input type="text" class="form-control" v-model="schlName">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="">Jurusan (Major)</label>
                                     <div>
-                                        <input type="text" class="form-control" v-model="univMajor">
+                                        <input type="text" class="form-control" v-model="schlMajor">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="">Kota (City)</label>
                                     <div>
-                                        <input type="text" class="form-control" v-model="univCity">
+                                        <input type="text" class="form-control" v-model="schlCity">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="">Periode (Periode)</label>
                                     <div>
-                                        <input type="text" class="form-control" v-model="univPeriode">
+                                        <input type="text" class="form-control" v-model="schlPeriode">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="">IPK (GPA)</label>
                                     <div>
-                                        <input type="text" class="form-control" v-model="univGPA">
+                                        <input type="text" class="form-control" v-model="schlGPA">
                                     </div>
                                 </div>
 
@@ -618,7 +618,7 @@
                                 <div class="form-group">
                                     <label for="">Jurusan (Major)</label>
                                     <div>
-                                        <input type="text" class="form-control" v-model="MajorDip">
+                                        <input type="text" class="form-control" v-model="majorDip">
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -738,21 +738,21 @@
                                 <div class="form-group">
                                     <label for="">Nama Kursus atau Pelatihan Name of Course or Training</label>
                                     <div>
-                                        <input type="text" class="form-control">
+                                        <input type="text" class="form-control" v-model="nameOfCourseDataKe1">
                                     </div>
                                 </div>
 
                                 <div class="form-group">
                                     <label for="">Penyelenggara Organizer</label>
                                     <div>
-                                        <input type="text" class="form-control">
+                                        <input type="text" class="form-control" v-model="organizerDataKe1">
                                     </div>
                                 </div>
 
                                 <div class="form-group">
                                     <label for="">Tahun Year</label>
                                     <div>
-                                        <select name="tahun">
+                                        <select name="tahun" v-model="yearDataKe1">
                                             <option value="">1996</option>
                                             <option value="">1997</option>
                                             <option value="">1998</option>
@@ -785,14 +785,7 @@
                                 <div class="form-group">
                                     <label for="">Keterangan Notes</label>
                                     <div>
-                                        <input type="text" class="form-control" id="">
-                                    </div>
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="">Nama Kursus atau Pelatihan Name of Course or Training</label>
-                                    <div>
-                                        <input type="text" class="form-control" id="">
+                                        <input type="text" class="form-control" id="" v-model="notesDataKe1">
                                     </div>
                                 </div>
 
@@ -800,14 +793,14 @@
                                 <div class="form-group">
                                     <label for="">Nama Kursus atau Pelatihan Name of Course or Training</label>
                                     <div>
-                                        <input type="text" class="form-control" id="">
+                                        <input type="text" class="form-control" id="" v-model="nameOfCourseDataKe2">
                                     </div>
                                 </div>
 
                                 <div class="form-group">
                                     <label for="">Penyelenggara Organizer</label>
                                     <div>
-                                        <input type="text" class="form-control" id="">
+                                        <input type="text" class="form-control" id="" v-model="organizerDataKe2">
                                     </div>
                                 </div>
 
@@ -815,7 +808,7 @@
                                     <label for="">Tahun Year</label>
                                     <div>
 
-                                        <select name="tahun">
+                                        <select name="tahun" v-model="yearDataKe2">
                                             <option value="">1996</option>
                                             <option value="">1997</option>
                                             <option value="">1998</option>
@@ -848,7 +841,7 @@
                                 <div class="form-group">
                                     <label for="">Keterangan Notes</label>
                                     <div>
-                                        <input type="text" class="form-control" id="">
+                                        <input type="text" class="form-control" id="" v-model="notesDataKe2">
                                     </div>
                                 </div>
 
@@ -856,14 +849,14 @@
                                 <div class="form-group">
                                     <label for="">Nama Kursus atau Pelatihan Name of Course or Training</label>
                                     <div>
-                                        <input type="text" class="form-control" id="">
+                                        <input type="text" class="form-control" id="" v-model="nameOfCourseDataKe3">
                                     </div>
                                 </div>
 
                                 <div class="form-group">
                                     <label for="">Penyelenggara Organizer</label>
                                     <div>
-                                        <input type="text" class="form-control" id="">
+                                        <input type="text" class="form-control" id="" v-model="organizerDataKe3">
                                     </div>
                                 </div>
 
@@ -871,7 +864,7 @@
                                     <label for="">Tahun Year</label>
                                     <div>
 
-                                        <select name="tahun">
+                                        <select name="tahun" v-model="yearDataKe3">
                                             <option value="">1996</option>
                                             <option value="">1997</option>
                                             <option value="">1998</option>
@@ -904,22 +897,22 @@
                                 <div class="form-group">
                                     <label for="">Keterangan Notes</label>
                                     <div>
-                                        <input type="text" class="form-control" id="">
+                                        <input type="text" class="form-control" id="" v-model="notesDataKe3">
                                     </div>
                                 </div>
 
-                                <h5>Data ke 3</h5>
+                                <h5>Data ke 4</h5>
                                 <div class="form-group">
                                     <label for="">Nama Kursus atau Pelatihan Name of Course or Training</label>
                                     <div>
-                                        <input type="text" class="form-control" id="">
+                                        <input type="text" class="form-control" id="" v-model="nameOfCourseDataKe4">
                                     </div>
                                 </div>
 
                                 <div class="form-group">
                                     <label for="">Penyelenggara Organizer</label>
                                     <div>
-                                        <input type="text" class="form-control" id="">
+                                        <input type="text" class="form-control" id="" v-model="organizerDataKe4">
                                     </div>
                                 </div>
 
@@ -927,7 +920,7 @@
                                     <label for="">Tahun Year</label>
                                     <div>
 
-                                        <select name="tahun">
+                                        <select name="tahun" v-model="yearDataKe4">
                                             <option value="">1996</option>
                                             <option value="">1997</option>
                                             <option value="">1998</option>
@@ -959,38 +952,94 @@
                                 <div class="form-group">
                                     <label for="">Keterangan Notes</label>
                                     <div>
-                                        <input type="text" class="form-control" id="">
+                                        <input type="text" class="form-control" id="" v-model="notesDataKe4">
                                     </div>
                                 </div>
 
                                 <div class="form-group">
                                     <h3>3. Kegiatan Sosial Social Activity</h3>
                                 </div>
-
+                                <h5>Data ke 1</h5>
                                 <div class="form-group">
                                     <label for="">Nama Organisasi Name of Organization</label>
                                     <div>
-                                        <input type="text" class="form-control" id="">
+                                        <input type="text" class="form-control" id="" v-model="nameOfOrganization1">
                                     </div>
                                 </div>
 
                                 <div class="form-group">
                                     <label for="">Bidang Field of Organization</label>
                                     <div>
-                                        <input type="text" class="form-control" id="">
+                                        <input type="text" class="form-control" id="" v-model="fieldOfOrganization1">
                                     </div>
                                 </div>
 
                                 <div class="form-group">
                                     <label for=""> Periode Keikutsertaan Attendance Period</label>
                                     <div>
-                                        <input type="text" class="form-control" id="">
+                                        <input type="text" class="form-control" id="" v-model="attendancePeriod1">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for=""> Keterangan Notes </label>
                                     <div>
-                                        <input type="text" class="form-control" id="">
+                                        <input type="text" class="form-control" id="" v-model="notesSocial1">
+                                    </div>
+                                </div>
+
+                                 <h5>Data ke 2</h5>
+                                <div class="form-group">
+                                    <label for="">Nama Organisasi Name of Organization</label>
+                                    <div>
+                                        <input type="text" class="form-control" id="" v-model="nameOfOrganization2">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="">Bidang Field of Organization</label>
+                                    <div>
+                                        <input type="text" class="form-control" id="" v-model="fieldOfOrganization2">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for=""> Periode Keikutsertaan Attendance Period</label>
+                                    <div>
+                                        <input type="text" class="form-control" id="" v-model="attendancePeriod2">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for=""> Keterangan Notes </label>
+                                    <div>                                               
+                                        <input type="text" class="form-control" id="" v-model="notesSocial2">
+                                    </div>
+                                </div>
+
+                                 <h5>Data ke 3</h5>
+                                <div class="form-group">
+                                    <label for="">Nama Organisasi Name of Organization</label>
+                                    <div>
+                                        <input type="text" class="form-control" id="" v-model="nameOfOrganization3">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="">Bidang Field of Organization</label>
+                                    <div>
+                                        <input type="text" class="form-control" id="" v-model="fieldOfOrganization3">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for=""> Periode Keikutsertaan Attendance Period</label>
+                                    <div>
+                                        <input type="text" class="form-control" id="" v-model="attendancePeriod3">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for=""> Keterangan Notes </label>
+                                    <div>                                               
+                                        <input type="text" class="form-control" id="" v-model="notesSocial3">
                                     </div>
                                 </div>
 
@@ -1001,15 +1050,14 @@
                                 <div class="form-group">
                                     <label for="">Penghargaan Achievement </label>
                                     <div>
-                                        <input type="text" class="form-control" id="">
+                                        <input type="text" class="form-control" id="" v-model="achievement1">
                                     </div>
                                 </div>
 
                                 <div class="form-group">
                                     <label for="">Tahun Year</label>
                                     <div>
-
-                                        <select name="tahun">
+                                        <select name="tahun" v-model="yearAchievement1">
                                             <option value="">1996</option>
                                             <option value="">1997</option>
                                             <option value="">1998</option>
@@ -1042,7 +1090,7 @@
                                 <div class="form-group">
                                     <label for="">Keterangan Notes </label>
                                     <div>
-                                        <input type="text" class="form-control" id="">
+                                        <input type="text" class="form-control" id="" v-model="notesAchievement1">
                                     </div>
                                 </div>
 
@@ -1050,15 +1098,14 @@
                                 <div class="form-group">
                                     <label for="">Penghargaan Achievement </label>
                                     <div>
-                                        <input type="text" class="form-control" id="">
+                                        <input type="text" class="form-control" id="" v-model="achievement2">
                                     </div>
                                 </div>
 
                                 <div class="form-group">
                                     <label for="">Tahun Year</label>
                                     <div>
-
-                                        <select name="tahun">
+                                        <select name="tahun" v-model="yearAchievement2">
                                             <option value="">1996</option>
                                             <option value="">1997</option>
                                             <option value="">1998</option>
@@ -1091,7 +1138,7 @@
                                 <div class="form-group">
                                     <label for="">Keterangan Notes </label>
                                     <div>
-                                        <input type="text" class="form-control" id="">
+                                        <input type="text" class="form-control" id="" v-model="notesAchievement2">
                                     </div>
                                 </div>
 
@@ -1099,15 +1146,14 @@
                                 <div class="form-group">
                                     <label for="">Penghargaan Achievement </label>
                                     <div>
-                                        <input type="text" class="form-control" id="">
+                                        <input type="text" class="form-control" id="" v-model="achievement3">
                                     </div>
                                 </div>
 
                                 <div class="form-group">
                                     <label for="">Tahun Year</label>
                                     <div>
-
-                                        <select name="tahun">
+                                        <select name="tahun" v-model="yearAchievement3">
                                             <option value="">1996</option>
                                             <option value="">1997</option>
                                             <option value="">1998</option>
@@ -1140,14 +1186,13 @@
                                 <div class="form-group">
                                     <label for="">Keterangan Notes </label>
                                     <div>
-                                        <input type="text" class="form-control" id="">
+                                        <input type="text" class="form-control" id="" v-model="notesAchievement3">
                                     </div>
                                 </div>
 
                                 <div class="form-group">
                                     <label for="">Keterangan:</label>
                                     <div>
-
                                         <h5>    Berikan tanda checklist (√) sesuai dengan kemampuan berbahasa Anda
                      Please give checklist (√) based on your language competencies</h5>
                                     </div>
@@ -1157,14 +1202,18 @@
                                     <label for="">Bahasa Inggris</label>
                                     <div>
                                         <label for="">Lisan Spoken</label><br/>
-                                        <input type="checkbox" name="vehicle" value="">Active
+                                        <input type="checkbox" value="active" id="active" v-model="spokenLanguage1">
+                                        <label for="Active">Active</label>
                                         <br>
-                                        <input type="checkbox" name="vehicle" value="">Passive
+                                        <input type="checkbox" value="passive" id="passive"v-model="spokenLanguage1">
+                                        <label for="Passive">Passive</label>
                                         <br/><br/>
                                         <label for="">Tulisan Written</label><br/>
-                                        <input type="checkbox" name="vehicle" value="">Active
+                                        <input type="checkbox" value="active" id="active" v-model="writtenLanguage1">
+                                        <label for="Active">Active</label>
                                         <br>
-                                        <input type="checkbox" name="vehicle" value="">Passive
+                                        <input type="checkbox" value="passive" id="passive" v-model="writtenLanguage1">
+                                        <label for="Passive">Passive</label>
                                         <br>
                                     </div>
                                 </div>
@@ -1172,23 +1221,40 @@
                                 <div class="form-group">
                                     <label for="">Bahasa</label><br/>
                                     <div>
-                                        <input type="text" class="form-control" id="">
+                                        <input type="text" class="form-control" id="" v-model="nameOfLanguage2">
                                         <label for="">Lisan Spoken</label><br/>
-                                        <input type="checkbox" name="vehicle" value="">Active
+                                        <input type="checkbox" value="active"  id="active" v-model="spokenLanguage2">
+                                        <label for="Active">Active</label>
                                         <br>
-                                        <input type="checkbox" name="vehicle" value="">Passive
+                                        <input type="checkbox" value="passive" id="passive" v-model=spokenLanguage2>
+                                        <label for="Passive">Passive</label>
+                                        <br/><br/>
+                                        <label for="">Tulisan Written</label><br/>
+                                        <input type="checkbox" value="active" id="active" v-model="writtenLanguage2">
+                                        <label for="Active">Active</label>
+                                        <br>
+                                        <input type="checkbox" value="passive" id="passive" v-model="writtenLanguage2">
+                                        <label for="Passive">Passive</label>
                                         <br>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="">Bahasa</label>
                                     <div>
-                                        <input type="text" class="form-control" id="">
+                                        <input type="text" class="form-control" id="" v-model="nameOfLanguage3">
                                         <label for="">Lisan Spoken</label><br/>
-                                        <input type="checkbox" name="vehicle" value="">Active
+                                        <input type="checkbox" name="vehicle" value="active" id="active" v-model="spokenLanguage3">
+                                        <label for="Active">Active</label>
                                         <br>
-                                        <input type="checkbox" name="vehicle" value="">Passive
+                                        <input type="checkbox" name="vehicle" value="passive" id="passive" v-model="spokenLanguage3">
+                                        <label for="Passive">Passive</label>
+                                        <br><br/>
+                                        <label for="">Tulisan Written</label><br/>
+                                        <input type="checkbox" name="vehicle" value="active" id="active" v-model="writtenLanguage3">
+                                        <label for="Active">Active</label>
                                         <br>
+                                        <input type="checkbox" name="vehicle" value="passive" id="passive" v-model="writtenLanguage3">
+                                        <label for="Passive">Passive</label>
                                     </div>
                                 </div>
                                 <ul class="list-inline pull-right">
@@ -1221,37 +1287,37 @@
                                 <div class="form-group">
                                     <label for="">Nama Perusahaan Company name </label>
                                     <div>
-                                        <input type="text" class="form-control" id="">
+                                        <input type="text" class="form-control" id="" v-model="companyName1">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="">Bidang Usaha Company Field</label>
                                     <div>
-                                        <input type="text" class="form-control" id="">
+                                        <input type="text" class="form-control" id="" v-model="companyField1">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="">Jabatan Position</label>
                                     <div>
-                                        <input type="text" class="form-control" id="">
+                                        <input type="text" class="form-control" id="" v-model="position1">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="">Periode Period</label>
                                     <div>
-                                        <input type="text" class="form-control" id="">
+                                        <input type="text" class="form-control" id="" v-model="period1">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="">Deskripsi Pekerjaan Job Description </label>
                                     <div>
-                                        <input type="text" class="form-control" id="">
+                                        <input type="text" class="form-control" id="" v-model="jobDescription1">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="">Alasan Berhenti Reason to Leave </label>
                                     <div>
-                                        <input type="text" class="form-control" id="">
+                                        <input type="text" class="form-control" id="" v-model="reasonToLeave1">
                                     </div>
                                 </div>
 
@@ -1264,19 +1330,19 @@
                                 <div class="form-group">
                                     <label for="">Nama (Name)</label>
                                     <div>
-                                        <input type="text" class="form-control" id="">
+                                        <input type="text" class="form-control" id="" v-model="referenceName1">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="">Jabatan Position</label>
                                     <div>
-                                        <input type="text" class="form-control" id="">
+                                        <input type="text" class="form-control" id="" v-model="referencePosition1">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="">No Telepon Phone Number</label>
                                     <div>
-                                        <input type="text" class="form-control" id="">
+                                        <input type="text" class="form-control" id="" v-model="referencePhoneNumber1">
                                     </div>
                                 </div>
 
@@ -1305,37 +1371,37 @@
                                 <div class="form-group">
                                     <label for="">Nama Perusahaan Company name </label>
                                     <div>
-                                        <input type="text" class="form-control" id="">
+                                        <input type="text" class="form-control" id="" v-model="companyName2">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="">Bidang Usaha Company Field</label>
                                     <div>
-                                        <input type="text" class="form-control" id="">
+                                        <input type="text" class="form-control" id="" v-model="companyField2">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="">Jabatan Position</label>
                                     <div>
-                                        <input type="text" class="form-control" id="">
+                                        <input type="text" class="form-control" id="" v-model="position2">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="">Periode Period</label>
                                     <div>
-                                        <input type="text" class="form-control" id="">
+                                        <input type="text" class="form-control" id="" v-model="period2">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="">Deskripsi Pekerjaan Job Description </label>
                                     <div>
-                                        <input type="text" class="form-control" id="">
+                                        <input type="text" class="form-control" id="" v-model="jobDescription2">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="">Alasan Berhenti Reason to Leave </label>
                                     <div>
-                                        <input type="text" class="form-control" id="">
+                                        <input type="text" class="form-control" id="" v-model="reasonToLeave2">
                                     </div>
                                 </div>
 
@@ -1348,19 +1414,19 @@
                                 <div class="form-group">
                                     <label for="">Nama (Name)</label>
                                     <div>
-                                        <input type="text" class="form-control" id="">
+                                        <input type="text" class="form-control" id="" v-model="referenceName2">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="">Jabatan Position</label>
                                     <div>
-                                        <input type="text" class="form-control" id="">
+                                        <input type="text" class="form-control" id="" v-model="referencePosition2">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="">No Telepon Phone Number</label>
                                     <div>
-                                        <input type="text" class="form-control" id="">
+                                        <input type="text" class="form-control" id="" v-model="referencePhoneNumber2">
                                     </div>
                                 </div>
 
@@ -1416,7 +1482,7 @@
                                 <div class="form-group">
                                     <label class="question-form-essay col-sm-9" for="">Faktor apa yang akan mendorong Anda untuk bertahan dalam suatu pekerjaan? What factors would encourage you to stay on the job?</label>
                                     <div class="form-essay col-sm-12">
-                                        <textarea class="control-label form-control" rows="5" id="" v-model="factorEncaurageYouOnThatJob"></textarea>
+                                        <textarea class="control-label form-control" rows="5" id="" v-model="factorEncourageYouOnThatJob"></textarea>
                                     </div>
                                 </div>
 
@@ -1493,7 +1559,7 @@
                                 <div class="form-group">
                                     <label class="question-form-essay col-sm-9" for=""> Apakah Anda memiliki pekerjaan sampingan/part time? Sebutkan! Do you have any other jobs/part time job now? Please mention!</label>
                                     <div class="form-essay col-sm-12">
-                                        <textarea class="control-label form-control" rows="5" id="" v-model="havePartTimeJob"></textarea>
+                                        <textarea class="control-label form-control" rows="5" id="" v-model="havePartTimejob"></textarea>
                                     </div>
                                 </div>
 
@@ -1553,14 +1619,13 @@ export default {
       idCardNumber: '',
       drivingLicense: [],
       emailAddress: '',
-      uploadCV: '',
       twitter: '',
       facebook: '',
       linkedIn: '',
       blog: '',
       handphone: '',
       religion: '',
-      ethnicty: '',
+      ethnicity: '',
       maritalStatus: '',
       currentAddress: '',
       homeAddress: '',
@@ -1579,19 +1644,10 @@ export default {
       spouseLatestEducation: '',
       spouseCurrentJob: '',
       responsibilities: '',
+      factorEncourageYouOnThatJob: '',
       responsibilitiesType: '',
       reasonMajor: '',
       titleThesis: '',
-      nameOfOrganization: '',
-      fieldOfOrganization: '',
-      attendancePeriod: '',
-      notes: '',
-      achievement: '',
-      yearAchievement: '',
-      notesAchievement: '',
-      reasonInterestedInGDN: '',
-      reasonApplyOnThatPosition: '',
-      factorEncaurageYouOnThatJob: '',
       kindOfEnvirontment: '',
       lifeValue: '',
       spesificSkill: '',
@@ -1604,8 +1660,128 @@ export default {
       timeStartWork: '',
       cv: null,
       brothers: [],
-      children: []
-    }
+      chil: [],
+      achievements: [],
+      language: [],
+      nonFrmlCrs: [],
+      school: [],
+      socialact: [],
+      workExp: [],
+      brothersName1: '',
+      brothersBirthday1: '',
+      brotherLatestEducation1: '',
+      brotherCurrentJob1: '',
+      brothersName2: '',
+      brothersBirthday2: '',
+      brotherLatestEducation2: '',
+      brotherCurrentJob2: '',
+      childrenName1: '',
+      childrenBirthday1: '',
+      childrenLatestEducation1: '',
+      childrenCurrentJob1: '',
+      childrenName2: '',
+      childrenBirthday2: '',
+      childrenLatestEducation2: '',
+      childrenCurrentJob2: '',
+      childrenName3: '',
+      childrenBirthday3: '',
+      childrenLatestEducation3: '',
+      childrenCurrentJob3: '',
+      childrenName4: '',
+      childrenBirthday4: '',
+      childrenLatestEducation4: '',
+      childrenCurrentJob4: '',
+      childrenName5: '',
+      childrenBirthday5: '',
+      childrenLatestEducation5: '',
+      childrenCurrentJob5: '',
+      achievement1: '',
+      yearAchievement1: '',
+      notesAchievement1: '',
+      achievement2: '',
+      yearAchievement2: '',
+      notesAchievement2: '',
+      achievement3: '',
+      yearAchievement3: '',
+      notesAchievement3: '',
+      nameOfLanguage1: 'Bahasa Inggris',
+      spokenLanguage1: [],
+      writtenLanguage1: [],
+      nameOfLanguage2: '',
+      spokenLanguage2: [],
+      writtenLanguage2: [],
+      nameOfLanguage3: '',
+      spokenLanguage3: [],
+      writtenLanguage3: [],
+      nameOfCourseDataKe1: '',
+      organizerDataKe1: '',
+      yearDataKe1: '',
+      notesDataKe1: '',
+      nameOfCourseDataKe2: '',
+      organizerDataKe2: '',
+      yearDataKe2: '',
+      notesDataKe2: '',
+      nameOfCourseDataKe3: '',
+      organizerDataKe3: '',
+      yearDataKe3: '',
+      notesDataKe3: '',
+      nameOfCourseDataKe4: '',
+      organizerDataKe4: '',
+      yearDataKe4: '',
+      notesDataKe4: '',
+      schlName: '',
+      schlMajor: '',
+      schlCity: '',
+      schlPeriode: '',
+      schlGPA: '',
+      univNameDip: '',
+      majorDip: '',
+      cityDip: '',
+      periodeDip: '',
+      gpaDip: '',
+      univNameS1: '',
+      majorS1: '',
+      cityS1: '',
+      periodeS1: '',
+      gpaS1: '',
+      univNameS2: '',
+      majorS2: '',
+      cityS2: '',
+      periodeS2: '',
+      gpaS2: '',
+      nameOfOrganization1: '',
+      fieldOfOrganization1: '',
+      attendancePeriod1: '',
+      notesSocial1: '',
+      nameOfOrganization2: '',
+      fieldOfOrganization2: '',
+      attendancePeriod2: '',
+      notesSocial2: '',
+      nameOfOrganization3: '',
+      fieldOfOrganization3: '',
+      attendancePeriod3: '',
+      notesSocial3: '',
+      companyName1: '',
+      companyField1: '',
+      position1: '',
+      period1: '',
+      jobDescription1: '',
+      reasonToLeave1: '',
+      referenceName1: '',
+      referencePosition1: '',
+      referencePhoneNumber1: '',
+      companyName2: '',
+      companyField2: '',
+      position2: '',
+      period2: '',
+      jobDescription2: '',
+      reasonToLeave2: '',
+      referenceName2: '',
+      referencePosition2: '',
+      referencePhoneNumber2: '',
+      reasonInterestedInGDN: '',
+      reasonApplyOnThatPosition: '',
+      factorEncaurageYouOnThatJob: ''}
   },
   methods: {
     inputcv () {
@@ -1620,7 +1796,7 @@ export default {
         'brotherLatestEducation': self.brotherLatestEducation2,
         'brotherCurrentJob': self.brotherCurrentJob2
       }]
-      var chil = [{'childrenName': self.childrenName1,
+      var children = [{'childrenName': self.childrenName1,
         'childrenBirthday': self.childrenBirthday1,
         'childrenLatestEducation': self.childrenLatestEducation1,
         'childrenCurrentJob': self.childrenCurrentJob1
@@ -1645,6 +1821,117 @@ export default {
         'childrenLatestEducation': self.childrenLatestEducation5,
         'childrenCurrentJob': self.childrenCurrentJob5
       }]
+      var achieve = [{
+        'achievement': self.achievement1,
+        'year': self.yearAchievement1,
+        'notes': self.notesAchievement1
+      }, {
+        'achievement': self.achievement2,
+        'year': self.achievement2,
+        'notes': self.notesAchievement2
+      }, {
+        'achievement': self.achievement3,
+        'year': self.achievement3,
+        'notes': self.notesAchievement3
+      }]
+      var lang = [{
+        'nameOfLanguage': self.nameOfLanguage1,
+        'spokenLanguage': self.spokenLanguage1,
+        'writtenLanguage': self.writtenLanguage1
+      }, {
+        'nameOfLanguage': self.nameOfLanguage2,
+        'spokenLanguage': self.spokenLanguage2,
+        'writtenLanguage': self.writtenLanguage2
+      }, {
+        'nameOfLanguage': self.nameOfLanguage3,
+        'spokenLanguage': self.spokenLanguage3,
+        'writtenLanguage': self.writtenLanguage3
+      }]
+      var nonFormlCours = [{
+        'nameOfCourse': self.nameOfCourseDataKe1,
+        'organizer': self.organizerDataKe1,
+        'year': self.yearDataKe1,
+        'notes': self.notesDataKe1
+      }, {
+        'nameOfCourse': self.nameOfCourseDataKe2,
+        'organizer': self.organizerDataKe2,
+        'year': self.yearDataKe2,
+        'notes': self.notesDataKe2
+      }, {
+        'nameOfCourse': self.nameOfCourseDataKe3,
+        'organizer': self.organizerDataKe3,
+        'year': self.yearDataKe3,
+        'notes': self.notesDataKe3
+      }, {
+        'nameOfCourse': self.nameOfCourseDataKe4,
+        'organizer': self.organizerDataKe4,
+        'year': self.yearDataKe4,
+        'notes': self.notesDataKe4
+      }]
+      var schl = [{
+        'schoolName': self.schlName,
+        'major': self.schlMajor,
+        'city': self.schlCity,
+        'periode': self.schlPeriode,
+        'gpa': self.schlGPA
+      }, {
+        'schoolName': self.univNameDip,
+        'major': self.majorDip,
+        'city': self.cityDip,
+        'periode': self.periodeDip,
+        'gpa': self.gpaDip
+      }, {
+        'schoolName': self.univNameS1,
+        'major': self.majorS1,
+        'city': self.cityS1,
+        'periode': self.periodeS1,
+        'gpa': self.gpaS1
+      }, {
+        'schoolName': self.univNameS2,
+        'major': self.majorS2,
+        'city': self.cityS2,
+        'periode': self.periodeS2,
+        'gpa': self.gpaS2
+      }]
+      var socialActiv = [{
+        'nameOrganization': self.nameOfOrganization1,
+        'fieldOfOrganization': self.fieldOfOrganization1,
+        'attendancePeriod': self.attendancePeriod1,
+        'notes': self.notesSocial1
+      }, {
+        'nameOrganization': self.nameOfOrganization2,
+        'fieldOfOrganization': self.fieldOfOrganization2,
+        'attendancePeriod': self.attendancePeriod2,
+        'notes': self.notesSocial2
+      }, {
+        'nameOrganization': self.nameOfOrganization3,
+        'fieldOfOrganization': self.fieldOfOrganization3,
+        'attendancePeriod': self.attendancePeriod3,
+        'notes': self.notesSocial3
+      }]
+      var workexpc = [{
+        'companyName': self.companyName1,
+        'companyField': self.companyField1,
+        'position': self.position1,
+        'period': self.period1,
+        'jobDescription': self.jobDescription1,
+        'reasonToLeave': self.reasonToLeave1,
+        'referenceName': self.referenceName1,
+        'referencePosition': self.referencePosition1,
+        'referencePhoneNumber': self.referencePhoneNumber1,
+        'organizationalChart': ''
+      }, {
+        'companyName': self.companyName2,
+        'companyField': self.companyField2,
+        'position': self.position2,
+        'period': self.period2,
+        'jobDescription': self.jobDescription2,
+        'reasonToLeave': self.reasonToLeave2,
+        'referenceName': self.referenceName2,
+        'referencePosition': self.referencePosition2,
+        'referencePhoneNumber': self.referencePhoneNumber2,
+        'organizationalChart': ''
+      }]
       self.$http.post('http://localhost:7777/cv/add', {
         fullName: self.fullName,
         title: self.title,
@@ -1653,16 +1940,16 @@ export default {
         idCardNumber: self.idCardNumber,
         drivingLicense: self.drivingLicense,
         emailAddress: self.emailAddress,
-        uploadCV: self.uploadCV,
         twitter: self.twitter,
         facebook: self.facebook,
         linkedIn: self.linkedIn,
         blog: self.blog,
         homeAddress: self.homeAddress,
+        currentAddress: self.currentAddress,
         homePhone: self.homePhone,
         handphone: self.handphone,
         emergencyCall: self.emergencyCall,
-        ethnicty: self.ethnicty,
+        ethnicity: self.ethnicity,
         maritalStatus: self.maritalStatus,
         religion: self.religion,
         fatherName: self.fatherName,
@@ -1688,6 +1975,7 @@ export default {
         achievement: self.achievement,
         yearAchievement: self.yearAchievement,
         notesAchievement: self.notesAchievement,
+        factorEncourageYouOnThatJob: self.factorEncaurageYouOnThatJob,
         reasonInterestedInGDN: self.reasonInterestedInGDN,
         reasonApplyOnThatPosition: self.reasonApplyOnThatPosition,
         factorEncaurageYouOnThatJob: self.factorEncaurageYouOnThatJob,
@@ -1701,7 +1989,14 @@ export default {
         haveAppliedOnGDN: self.haveAppliedOnGDN,
         havePartTimeJob: self.havePartTimeJob,
         timeStartWork: self.timeStartWork,
-        bro: bros}, (json) => {
+        bro: bros,
+        chil: children,
+        achievements: achieve,
+        language: lang,
+        nonFrmlCrs: nonFormlCours,
+        school: schl,
+        socialact: socialActiv,
+        workExp: workexpc}, (json) => {
           window.sessionStorage.setItem('cv', json)
           this.cv = json
           alert(this.cv)
