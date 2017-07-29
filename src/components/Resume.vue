@@ -427,7 +427,7 @@
                                 <div class="form-group">
                                     <label for="pendidikanterakhiranak">Pendidikan Terakhir (Latest Education)</label>
                                     <div>
-                                        <input type="text" class="form-control" id="pendidikanterakhiranak" v-model="childrenLatestEducation1" placeholder="Pendidikan Terakhir (Latest Education)">
+                                        <input type="text" class="form-control" id="pendidikanterakhiranak" v-model="chilLatestEdu1" placeholder="Pendidikan Terakhir (Latest Education)">
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -452,13 +452,13 @@
                                 <div class="form-group">
                                     <label for="pendidikanterakhiranak">Pendidikan Terakhir (Latest Education)</label>
                                     <div>
-                                        <input type="text" class="form-control" id="pendidikanterakhiranak" v-model="childrenLatestEducation1" placeholder="Pendidikan Terakhir (Latest Education)">
+                                        <input type="text" class="form-control" id="pendidikanterakhiranak" v-model="chilLatestEdu2" placeholder="Pendidikan Terakhir (Latest Education)">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="pekerjaananak">Pekerjaan</label>
                                     <div>
-                                        <input type="text" class="form-control" id="pekerjaananak" v-model="childrenCurrentJob1" placeholder="Pekerjaan (Current Job)">
+                                        <input type="text" class="form-control" id="pekerjaananak" v-model="childrenCurrentJob2" placeholder="Pekerjaan (Current Job)">
                                     </div>
                                 </div>
 
@@ -478,13 +478,13 @@
                                 <div class="form-group">
                                     <label for="pendidikanterakhiranak">Pendidikan Terakhir (Latest Education)</label>
                                     <div>
-                                        <input type="text" class="form-control" id="pendidikanterakhiranak" v-model="childrenLatestEducation3" placeholder="Pendidikan Terakhir (Latest Education)">
+                                        <input type="text" class="form-control" id="pendidikanterakhiranak" v-model="chilLatestEdu3" placeholder="Pendidikan Terakhir (Latest Education)">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="pekerjaananak">Pekerjaan</label>
                                     <div>
-                                        <input type="text" class="form-control" id="pekerjaananak" v-model="childrenCurrentJob2" placeholder="Pekerjaan (Current Job)">
+                                        <input type="text" class="form-control" id="pekerjaananak" v-model="childrenCurrentJob3" placeholder="Pekerjaan (Current Job)">
                                     </div>
                                 </div>
 
@@ -504,7 +504,7 @@
                                 <div class="form-group">
                                     <label for="pendidikanterakhiranak">Pendidikan Terakhir (Latest Education)</label>
                                     <div>
-                                        <input type="text" class="form-control" id="pendidikanterakhiranak" v-model="childrenLatestEducation4" placeholder="Pendidikan Terakhir (Latest Education)">
+                                        <input type="text" class="form-control" id="pendidikanterakhiranak" v-model="chilLatestEdu4" placeholder="Pendidikan Terakhir (Latest Education)">
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -529,7 +529,7 @@
                                 <div class="form-group">
                                     <label for="pendidikanterakhiranak">Pendidikan Terakhir (Latest Education)</label>
                                     <div>
-                                        <input type="text" class="form-control" id="pendidikanterakhiranak" v-model="childrenLatestEducation5" placeholder="Pendidikan Terakhir (Latest Education)">
+                                        <input type="text" class="form-control" id="pendidikanterakhiranak" v-model="chilLatestEdu5" placeholder="Pendidikan Terakhir (Latest Education)">
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -1205,7 +1205,7 @@
                                         <input type="checkbox" value="active" id="active" v-model="spokenLanguage1">
                                         <label for="Active">Active</label>
                                         <br>
-                                        <input type="checkbox" value="passive" id="passive"v-model="spokenLanguage1">
+                                        <input type="checkbox" value="passive" id="passive" v-model="spokenLanguage1">
                                         <label for="Passive">Passive</label>
                                         <br/><br/>
                                         <label for="">Tulisan Written</label><br/>
@@ -1656,7 +1656,7 @@ export default {
       placeGetInformationGDN: '',
       relativeWorkingOnGDN: '',
       haveAppliedOnGDN: '',
-      havePartTimeJob: '',
+      havePartTimejob: '',
       timeStartWork: '',
       cv: null,
       brothers: [],
@@ -1677,23 +1677,23 @@ export default {
       brotherCurrentJob2: '',
       childrenName1: '',
       childrenBirthday1: '',
-      childrenLatestEducation1: '',
+      chilLatestEdu1: '',
       childrenCurrentJob1: '',
       childrenName2: '',
       childrenBirthday2: '',
-      childrenLatestEducation2: '',
+      chilLatestEdu2: '123',
       childrenCurrentJob2: '',
       childrenName3: '',
       childrenBirthday3: '',
-      childrenLatestEducation3: '',
+      chilLatestEdu3: '',
       childrenCurrentJob3: '',
       childrenName4: '',
       childrenBirthday4: '',
-      childrenLatestEducation4: '',
+      chilLatestEdu4: '',
       childrenCurrentJob4: '',
       childrenName5: '',
       childrenBirthday5: '',
-      childrenLatestEducation5: '',
+      chilLatestEdu5: '',
       childrenCurrentJob5: '',
       achievement1: '',
       yearAchievement1: '',
@@ -1715,40 +1715,40 @@ export default {
       writtenLanguage3: [],
       nameOfCourseDataKe1: '',
       organizerDataKe1: '',
-      yearDataKe1: '',
+      yearDataKe1: 0.0,
       notesDataKe1: '',
       nameOfCourseDataKe2: '',
       organizerDataKe2: '',
-      yearDataKe2: '',
+      yearDataKe2: 0.0,
       notesDataKe2: '',
       nameOfCourseDataKe3: '',
       organizerDataKe3: '',
-      yearDataKe3: '',
+      yearDataKe3: 0.0,
       notesDataKe3: '',
       nameOfCourseDataKe4: '',
       organizerDataKe4: '',
-      yearDataKe4: '',
+      yearDataKe4: 0.0,
       notesDataKe4: '',
       schlName: '',
       schlMajor: '',
       schlCity: '',
       schlPeriode: '',
-      schlGPA: '',
+      schlGPA: 0.0,
       univNameDip: '',
       majorDip: '',
       cityDip: '',
       periodeDip: '',
-      gpaDip: '',
+      gpaDip: 0.0,
       univNameS1: '',
       majorS1: '',
       cityS1: '',
       periodeS1: '',
-      gpaS1: '',
+      gpaS1: 0.0,
       univNameS2: '',
       majorS2: '',
       cityS2: '',
       periodeS2: '',
-      gpaS2: '',
+      gpaS2: 0.0,
       nameOfOrganization1: '',
       fieldOfOrganization1: '',
       attendancePeriod1: '',
@@ -1798,27 +1798,27 @@ export default {
       }]
       var children = [{'childrenName': self.childrenName1,
         'childrenBirthday': self.childrenBirthday1,
-        'childrenLatestEducation': self.childrenLatestEducation1,
+        'chilLatestEdu': self.chilLatestEdu1,
         'childrenCurrentJob': self.childrenCurrentJob1
       }, {
         'childrenName': self.childrenName2,
         'childrenBirthday': self.childrenBirthday2,
-        'childrenLatestEducation': self.childrenLatestEducation2,
+        'chilLatestEdu': self.chilLatestEdu2,
         'childrenCurrentJob': self.childrenCurrentJob2
       }, {
         'childrenName': self.childrenName3,
         'childrenBirthday': self.childrenBirthday3,
-        'childrenLatestEducation': self.childrenLatestEducation3,
+        'chilLatestEdu': self.chilLatestEdu3,
         'childrenCurrentJob': self.childrenCurrentJob3
       }, {
         'childrenName': self.childrenName4,
         'childrenBirthday': self.childrenBirthday4,
-        'childrenLatestEducation': self.childrenLatestEducation4,
+        'chilLatestEdu': self.chilLatestEdu4,
         'childrenCurrentJob': self.childrenCurrentJob4
       }, {
         'childrenName': self.childrenName5,
         'childrenBirthday': self.childrenBirthday5,
-        'childrenLatestEducation': self.childrenLatestEducation5,
+        'chilLatestEdu': self.chilLatestEdu5,
         'childrenCurrentJob': self.childrenCurrentJob5
       }]
       var achieve = [{
@@ -1987,7 +1987,7 @@ export default {
         placeGetInformationGDN: self.placeGetInformationGDN,
         relativeWorkingOnGDN: self.relativeWorkingOnGDN,
         haveAppliedOnGDN: self.haveAppliedOnGDN,
-        havePartTimeJob: self.havePartTimeJob,
+        havePartTimejob: self.havePartTimejob,
         timeStartWork: self.timeStartWork,
         bro: bros,
         chil: children,
