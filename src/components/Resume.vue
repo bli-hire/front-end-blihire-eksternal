@@ -1350,7 +1350,7 @@
                                     <label for="">1.</label>
                                     <div>
 
-                                        <h5>     Mohon gambarkan posisi terakhir Anda dalam struktur organisasi! STRUKTUR ORGANISASI
+                                        <h5>     Mohon gamba123rkan posisi terakhir Anda dalam struktur organisasi! STRUKTUR ORGANISASI
                          Please describe your last position in organizational chart!
                        </h5>
                                     </div>
