@@ -8,12 +8,10 @@
   <div class="text-center">
     <h2>Your Apply Number :</h2>
   </div>
+        {{this.uid}}
+  
 
-  <div class="track-code text-center">
-    <a href="alert1.html">#324AB32</a>
-  </div>
-
-    <router-view></router-view>
+    
   </div>
 
 </template>
@@ -23,14 +21,28 @@ export default {
   name: 'Alert',
   data () {
     return {
-      statePage: 'Alert'
+      resultContent: {
+        resultCV: {}
+      },
+      uid: ''
     }
   },
-  methods: {
-    chStatePageToResume () {
-      this.statePage = 'Alert'
-      console.log(this.statePage)
-    }
+  beforeMount () {
+    var self = this
+    // alert('tes')
+    self.$http.get('http://localhost:7777/cv', {}, {
+    }).then(response => {
+      // alert(JSON.stringify(response))
+      if (response.data.data === '[]') {
+        this.resultContent.resultCV = null
+      } else {
+        var cv = JSON.stringify(response.data)
+        var _uid = JSON.stringify(response.data.data[response.data.totalData - 1].uid)
+        this.uid = _uid
+        this.resultContent.resultCV = cv
+        alert(this.uid)
+      }
+    })
   }
 }
 </script>
