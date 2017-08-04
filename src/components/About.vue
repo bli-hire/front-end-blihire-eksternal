@@ -72,7 +72,6 @@
     </div>
   </div>
 </section>
- <router-view></router-view>
 </div>
 
 </template>
@@ -83,6 +82,11 @@ export default {
   data () {
     return {
       statePage: 'About'
+    }
+  },
+  methods: {
+    chStatePageTo (newState) {
+      this.statePage = newState
     }
   }
 }
