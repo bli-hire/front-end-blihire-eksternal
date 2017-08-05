@@ -233,12 +233,17 @@
                                             <input type="text" class="form-control" id="kontakdarurat" v-model="emergencyCall" placeholder="Kontak Darurat (Emergency Call)">
                                         </div>
                                     </div>
-                                    <ul class="list-inline pull-right">
+                                    <!-- <ul class="list-inline pull-right">
                                         <li>
                                             <button type="button" class="btn btn-primary next-step">Save and continue</button>
                                         </li>
+                                    </ul> -->
+                                    <ul class="list-inline pull-right">
+                                        <li>
+                                            <button type="button" class="btn btn-warning next-step">Go</button>
+                                        </li>
                                     </ul>
-
+                                    
                                 </form>
 
                             </div>
@@ -1276,9 +1281,7 @@
                                 <div class="form-group">
                                     <label for="">1.</label>
                                     <div>
-
-                                        <h5>    Mohon diisi, dimulai dari pekerjaan terakhir!
-                           Please fill it descending from your current/latest employment!</h5>
+                                        <h5>Mohon diisi, dimulai dari pekerjaan terakhir! Please fill it descending from your current/latest employment!</h5>
                                     </div>
                                 </div>
 
@@ -1600,9 +1603,6 @@
             </section>
         </div>
     </div>
-
-   
-  <router-view></router-view>
   </div>
 </template>
 
@@ -1782,6 +1782,8 @@ export default {
       reasonInterestedInGDN: '',
       reasonApplyOnThatPosition: '',
       factorEncaurageYouOnThatJob: ''}
+  },
+  beforeMount () {
   },
   methods: {
     inputcv () {

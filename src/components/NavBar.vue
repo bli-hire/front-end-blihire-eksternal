@@ -19,6 +19,7 @@
                                 <li v-on:click="chStatePageToAbout()"><router-link to="/About">About</router-link></li>
                                 <li v-on:click="chStatePageToJobs()"><router-link to="/Jobs">Jobs</router-link></li>
                                 <li v-on:click="chStatePageToTracks()"><router-link to="/Tracks">Tracks</router-link></li>
+                                <!-- <li v-on:click="goToResume()">Resume</li> -->
                           </ul>
                       </div>
                   </div>
