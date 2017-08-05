@@ -233,16 +233,16 @@
                                             <input type="text" class="form-control" id="kontakdarurat" v-model="emergencyCall" placeholder="Kontak Darurat (Emergency Call)">
                                         </div>
                                     </div>
-                                    <!-- <ul class="list-inline pull-right">
+                                    <ul class="list-inline pull-right">
                                         <li>
                                             <button type="button" class="btn btn-primary next-step">Save and continue</button>
                                         </li>
-                                    </ul> -->
-                                    <ul class="list-inline pull-right">
+                                    </ul>
+                                   <!--  <ul class="list-inline pull-right">
                                         <li>
                                             <button type="button" class="btn btn-warning next-step">Go</button>
                                         </li>
-                                    </ul>
+                                    </ul> -->
                                     
                                 </form>
 
