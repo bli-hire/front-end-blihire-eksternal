@@ -9,9 +9,6 @@
     <h2>Your Apply Number :</h2>
   </div>
         {{this.uid}}
-  
-
-    
   </div>
 
 </template>
@@ -32,7 +29,7 @@ export default {
     // alert('tes')
     self.$http.get('http://localhost:7777/cv', {}, {
     }).then(response => {
-      // alert(JSON.stringify(response))
+      alert(JSON.stringify(response))
       if (response.data.data === '[]') {
         this.resultContent.resultCV = null
       } else {

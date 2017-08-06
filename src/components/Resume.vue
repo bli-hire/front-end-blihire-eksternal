@@ -1681,7 +1681,7 @@ export default {
       childrenCurrentJob1: '',
       childrenName2: '',
       childrenBirthday2: '',
-      chilLatestEdu2: '123',
+      chilLatestEdu2: '',
       childrenCurrentJob2: '',
       childrenName3: '',
       childrenBirthday3: '',
@@ -1781,7 +1781,8 @@ export default {
       referencePhoneNumber2: '',
       reasonInterestedInGDN: '',
       reasonApplyOnThatPosition: '',
-      factorEncaurageYouOnThatJob: ''}
+      factorEncaurageYouOnThatJob: '',
+      applicantStats: 'CV Recieved'}
   },
   beforeMount () {
   },
@@ -1935,6 +1936,7 @@ export default {
         'organizationalChart': ''
       }]
       self.$http.post('http://localhost:7777/cv/add', {
+        applicantStatus: self.applicantStats,
         fullName: self.fullName,
         title: self.title,
         jobTitle: self.jobTitle,
