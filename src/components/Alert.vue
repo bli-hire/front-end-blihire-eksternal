@@ -29,7 +29,6 @@ export default {
     // alert('tes')
     self.$http.get('http://localhost:7777/cv', {}, {
     }).then(response => {
-      alert(JSON.stringify(response))
       if (response.data.data === '[]') {
         this.resultContent.resultCV = null
       } else {
@@ -37,7 +36,6 @@ export default {
         var _uid = JSON.stringify(response.data.data[response.data.totalData - 1].uid)
         this.uid = _uid
         this.resultContent.resultCV = cv
-        alert(this.uid)
       }
     })
   }
