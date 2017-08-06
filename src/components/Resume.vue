@@ -238,7 +238,12 @@
                                             <button type="button" class="btn btn-primary next-step">Save and continue</button>
                                         </li>
                                     </ul>
-
+                                   <!--  <ul class="list-inline pull-right">
+                                        <li>
+                                            <button type="button" class="btn btn-warning next-step">Go</button>
+                                        </li>
+                                    </ul> -->
+                                    
                                 </form>
 
                             </div>
@@ -1276,9 +1281,7 @@
                                 <div class="form-group">
                                     <label for="">1.</label>
                                     <div>
-
-                                        <h5>    Mohon diisi, dimulai dari pekerjaan terakhir!
-                           Please fill it descending from your current/latest employment!</h5>
+                                        <h5>Mohon diisi, dimulai dari pekerjaan terakhir! Please fill it descending from your current/latest employment!</h5>
                                     </div>
                                 </div>
 
@@ -1600,9 +1603,6 @@
             </section>
         </div>
     </div>
-
-   
-  <router-view></router-view>
   </div>
 </template>
 
@@ -1681,7 +1681,7 @@ export default {
       childrenCurrentJob1: '',
       childrenName2: '',
       childrenBirthday2: '',
-      chilLatestEdu2: '123',
+      chilLatestEdu2: '',
       childrenCurrentJob2: '',
       childrenName3: '',
       childrenBirthday3: '',
@@ -1781,7 +1781,10 @@ export default {
       referencePhoneNumber2: '',
       reasonInterestedInGDN: '',
       reasonApplyOnThatPosition: '',
-      factorEncaurageYouOnThatJob: ''}
+      factorEncaurageYouOnThatJob: '',
+      applicantStats: 'CV Recieved'}
+  },
+  beforeMount () {
   },
   methods: {
     inputcv () {
@@ -1933,6 +1936,7 @@ export default {
         'organizationalChart': ''
       }]
       self.$http.post('http://localhost:7777/cv/add', {
+        applicantStatus: self.applicantStats,
         fullName: self.fullName,
         title: self.title,
         jobTitle: self.jobTitle,
