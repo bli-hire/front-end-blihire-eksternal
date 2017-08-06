@@ -13,7 +13,7 @@
     <h4>{{uid}}</h4>
   </div>
   <br/><br/></br>
- <h4>{{applicantStat}}</h4>
+ 
 
   <div v-if="applicantStat === 'CV Recieved'">
   <div class="stepwizard">
@@ -111,7 +111,7 @@ export default {
       applicantStat: ''
     }
   },
-  mounted () {
+  beforeMount () {
     var self = this
     self.uid = self.$route.query.uid
     self.$http.get('http://localhost:7777/cv/getCVByUid', {headers: {'uid': self.uid}},
@@ -121,7 +121,7 @@ export default {
         self.resultContent.resultCV = null
       } else {
         var _appStats = JSON.stringify(response.data.data[response.data.totalData - 1].applicantStatus)
-        this.applicantStat = JSON.parse(_appStats)
+        self.applicantStat = JSON.parse(_appStats)
       }
     })
   }
