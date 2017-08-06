@@ -44,8 +44,8 @@ export default new Router({
       component: Alert
     },
     {
-      path: '/TracksStatus',
-      name: 'TracksStatus',
+      path: '/TrackStatus',
+      name: 'TrackStatus',
       component: TracksStatus
     }
   ]

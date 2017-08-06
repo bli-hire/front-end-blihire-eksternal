@@ -1,21 +1,21 @@
 <template>
 
   <div class="Tracks">
-
      <div class="container-fluid">
           <div class="text-center">
             <form class="container-stt">
-              <input type="email" class="form-control text-center" size="50" placeholder="Enter your UID here" required>
-              <br/>                   
-               <div class="btn btn-info">
+              <input type="email" class="form-control text-center" size="50" placeholder="Enter your UID here" required v-model="uid">
+              <br/>     
+               <!-- <div class="btn btn-info">
                    <router-link to="/TracksStatus">Track</router-link>
+                </div> -->
+                <div class="btn btn-info">
+                   <router-link :to="{ path: '/TrackStatus', query:{uid: this.uid}}">Track</router-link>
                 </div>
             </form>
           </div>
       </div>
- 
 
-    <router-view></router-view>
   </div>
 </template>
 
@@ -24,9 +24,15 @@ export default {
   name: 'Tracks',
   data () {
     return {
-      msg: 'Welcome to Tracks'
+      msg: 'Welcome to Tracks',
+      uid: ''
+    }
+  },
+  methods: {
+    chStatePageToResume () {
     }
   }
+
 }
 </script>
 

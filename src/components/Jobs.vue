@@ -25,8 +25,8 @@
                     <li>Persistent and able to work under pressure</li>
                 </ul>
                 <div class="lookJob">
-                    <li v-on:click="chStatePageToResume()">
-                        <router-link to="/Resume">Apply Now</router-link>
+                    <li v-on:click="goToResume()">
+                        Apply Now
                     </li>
                 </div>
             </div>
@@ -82,7 +82,6 @@
     </div>
 
 </div>
-    <router-view></router-view>
   </div>
 </template>
 
@@ -98,6 +97,9 @@ export default {
     chStatePageToResume () {
       this.statePage = 'Jobs'
       console.log(this.statePage)
+    },
+    goToResume () {
+      window.location.href = '/Resume'
     }
   }
 }
