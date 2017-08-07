@@ -15,11 +15,10 @@
                       
                       <div class="collapse navbar-collapse" id="myNavbar">
                           <ul class="nav navbar-nav navbar-right">
-                                <li v-on:click="chStatePageToHome()"><router-link to="/">Home</router-link></li>
-                                <li v-on:click="chStatePageToAbout()"><router-link to="/About">About</router-link></li>
-                                <li v-on:click="chStatePageToJobs()"><router-link to="/Jobs">Jobs</router-link></li>
-                                <li v-on:click="chStatePageToTracks()"><router-link to="/Tracks">Tracks</router-link></li>
-                                <!-- <li v-on:click="goToResume()">Resume</li> -->
+                                <li><router-link to="/">Home</router-link></li>
+                                <li><router-link to="/About">About</router-link></li>
+                                <li><router-link to="/Jobs">Jobs</router-link></li>
+                                <li><router-link to="/Tracks">Tracks</router-link></li>
                           </ul>
                       </div>
                   </div>
@@ -29,7 +28,7 @@
       <br>
       <h1>You Can Make a Difference</h1>
       <div class="lookJob">
-        <a href="#">Search for a job</a>
+      <li v-on:click="chStatePageToHome()"><router-link to="/Jobs">Search for a job</router-link></li>
       </div>
     </div>
 </div>
@@ -41,24 +40,6 @@ export default {
   data () {
     return {
       statePage: 'Home'
-    }
-  },
-  methods: {
-    chStatePageToHome () {
-      this.statePage = 'Home'
-      console.log(this.statePage)
-    },
-    chStatePageToAbout () {
-      this.statePage = 'About'
-      console.log(this.statePage)
-    },
-    chStatePageToJobs () {
-      this.statePage = 'Jobs'
-      console.log(this.statePage)
-    },
-    chStatePageToTracks () {
-      this.statePage = 'Tracks'
-      console.log(this.statePage)
     }
   }
 }

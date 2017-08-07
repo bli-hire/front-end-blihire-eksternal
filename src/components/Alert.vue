@@ -26,20 +26,19 @@ export default {
   },
   beforeMount () {
     var self = this
-    // alert('tes')
-    self.$http.get('http://localhost:7777/cv', {}, {
-    }).then(response => {
-      alert(JSON.stringify(response))
-      if (response.data.data === '[]') {
-        this.resultContent.resultCV = null
-      } else {
-        var cv = JSON.stringify(response.data)
-        var _uid = JSON.stringify(response.data.data[response.data.totalData - 1].uid)
-        this.uid = _uid
-        this.resultContent.resultCV = cv
-        alert(this.uid)
-      }
-    })
+    self.uid = self.$route.query.uid
+    // var self = this
+    // self.$http.get('http://localhost:7777/cv', {}, {
+    // }).then(response => {
+    //   if (response.data.data === '[]') {
+    //     this.resultContent.resultCV = null
+    //   } else {
+    //     var cv = JSON.stringify(response.data)
+    //     var _uid = JSON.stringify(response.data.data[response.data.totalData - 1].uid)
+    //     this.uid = _uid
+    //     this.resultContent.resultCV = cv
+    //   }
+    // })
   }
 }
 </script>
