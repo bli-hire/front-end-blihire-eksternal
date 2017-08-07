@@ -92,8 +92,8 @@
 </div>
 </div>
 
-<div v-else>  
-Anda Belum Memasukkan Uid Yang Valid
+<div v-else class="text">  
+<h3>Uid is invalid</h3>
 </div>
   </div>
 
@@ -181,6 +181,9 @@ body{margin:40px;}
 }
 h1, h2 {
   font-weight: normal;
+}
+.text {
+  color: red;
 }
 
 ul {

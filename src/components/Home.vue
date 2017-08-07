@@ -6,9 +6,6 @@
     <h1>{{ msg }}</h1>
     <h2>Essential Links</h2> -->
 
-   
-      <br/><br/><br/>
-
       <div class="container-fluid">
         <div class="row">
           <img class="col-lg-6 col-md-6 col-sm-12 col-xs-12" src="../assets/meeting.jpg">
