@@ -54,8 +54,8 @@
                         <li>Familiar with Linux</li>
                     </ul>
                     <div class="lookJob">
-                        <li v-on:click="chStatePageToResume()">
-                            <router-link to="/Resume">Apply Now</router-link>
+                        <li v-on:click="goToResume()">
+                            Apply Now
                         </li>
                     </div>
                 </div>
@@ -81,13 +81,13 @@
                         <li>Familiar with Linux</li>
                     </ul>
                     <div class="lookJob">
-                        <li v-on:click="chStatePageToResume()">
-                            <router-link to="/Resume">Apply Now</router-link>
-                        </li>
+                       <li v-on:click="goToResume()">
+                        Apply Now
+                       </li>
                     </div>
                 </div>
 
-                        <a class="list-group-item" data-toggle="collapse" href="#technicalsupp">Technical Support Staff</a>
+                <a class="list-group-item" data-toggle="collapse" href="#technicalsupp">Technical Support Staff</a>
                 <div id="technicalsupp" class="collapse container-fluid">
                     As Sr System Development Engineer in Blibli.com, you will get a lot of chance to develop and implement the newest technologies that provide the best experience for Indonesian people in shopping online. You will responsible to researching, configuring, coding and testing of applications development.
                     <br> Qualifications:
@@ -108,23 +108,65 @@
                         <li>Familiar with Linux</li>
                     </ul>
                     <div class="lookJob">
-                        <li v-on:click="chStatePageToResume()">
-                            <router-link to="/Resume">Apply Now</router-link>
+                        <li v-on:click="goToResume()">
+                        Apply Now
                         </li>
                     </div>
                 </div>
-                <a class="list-group-item" v-on:click="" data-toggle="collapse">
-                    <router-link to="">Mobile Development Engineer</router-link>
-                </a>
-                <a class="list-group-item" v-on:click="" data-toggle="collapse">
-                    <router-link to="">Technical Support Staff</router-link>
-                </a>
-                <a class="list-group-item" v-on:click="" data-toggle="collapse">
-                    <router-link to="">System Development Engineer Testing</router-link>
-                </a>
-                <a class="list-group-item" v-on:click="" data-toggle="collapse">
-                    <router-link to="">System Development Engineer</router-link>
-                </a>
+
+                <a class="list-group-item" data-toggle="collapse" href="#sysdevenginetest">System Development Engineer Testing</a>
+                <div id="sysdevenginetest" class="collapse container-fluid">
+                    As Sr System Development Engineer in Blibli.com, you will get a lot of chance to develop and implement the newest technologies that provide the best experience for Indonesian people in shopping online. You will responsible to researching, configuring, coding and testing of applications development.
+                    <br> Qualifications:
+                    <ul>
+                        <li>Bachelor degree in Computer Science, Information Technology, Engineering or Science from a reputable university (with min GPA 3.0)</li>
+                        <li>Minimum 5 years or more of related experience</li>
+                        <li>Deep knowledge about OOP, Design Pattern, Software Design and Data Structure (Collection API)</li>
+                        <li>Good knowledge and strong hands-on experience in using Spring, Hibernate, Struts, GWT, EJB3 and Java Web technology</li>
+                        <li>Good knowledge about application integration (SOA) such as Webservice, RESTFul API, WSDL, JAX-WS, JAXB, JAX-RS, JAX-RPC and JSON</li>
+                        <li>Good knowledge about multi-threading, performance tuning, JDBC and Java Transaction API</li>
+                        <li>Good knowledge and hands-on experience on HTTP and TCP/IP protocol</li>
+                        <li>Good knowledge about building scalable application infrastructure and performance tuning to handle large volume of traffic</li>
+                        <li>Good knowledge about high availability, failover, clustering strategy and performance testing</li>
+                        <li>Basic understanding of UI technologies like Angular JS, Jquery, Ember JS would be a plus</li>
+                        <li>Good understanding and knowledge of relational database or non-sql databases – like memcache and redis</li>
+                        <li>Good troubleshooting and problem solving skills</li>
+                        <li>Ability to learn new technologies quickly and willingness to read and digest large existing source code and take ownership on complex component or subsystem</li>
+                        <li>Familiar with Linux</li>
+                    </ul>
+                     <div class="lookJob">
+                        <li v-on:click="goToResume()">
+                        Apply Now
+                         </li>
+                    </div>
+                </div>
+
+                <a class="list-group-item" data-toggle="collapse" href="#sysdevengine">System Development Engineer</a>
+                <div id="sysdevengine" class="collapse container-fluid">
+                    As Sr System Development Engineer in Blibli.com, you will get a lot of chance to develop and implement the newest technologies that provide the best experience for Indonesian people in shopping online. You will responsible to researching, configuring, coding and testing of applications development.
+                    <br> Qualifications:
+                    <ul>
+                        <li>Bachelor degree in Computer Science, Information Technology, Engineering or Science from a reputable university (with min GPA 3.0)</li>
+                        <li>Minimum 5 years or more of related experience</li>
+                        <li>Deep knowledge about OOP, Design Pattern, Software Design and Data Structure (Collection API)</li>
+                        <li>Good knowledge and strong hands-on experience in using Spring, Hibernate, Struts, GWT, EJB3 and Java Web technology</li>
+                        <li>Good knowledge about application integration (SOA) such as Webservice, RESTFul API, WSDL, JAX-WS, JAXB, JAX-RS, JAX-RPC and JSON</li>
+                        <li>Good knowledge about multi-threading, performance tuning, JDBC and Java Transaction API</li>
+                        <li>Good knowledge and hands-on experience on HTTP and TCP/IP protocol</li>
+                        <li>Good knowledge about building scalable application infrastructure and performance tuning to handle large volume of traffic</li>
+                        <li>Good knowledge about high availability, failover, clustering strategy and performance testing</li>
+                        <li>Basic understanding of UI technologies like Angular JS, Jquery, Ember JS would be a plus</li>
+                        <li>Good understanding and knowledge of relational database or non-sql databases – like memcache and redis</li>
+                        <li>Good troubleshooting and problem solving skills</li>
+                        <li>Ability to learn new technologies quickly and willingness to read and digest large existing source code and take ownership on complex component or subsystem</li>
+                        <li>Familiar with Linux</li>
+                    </ul>
+                    <div class="lookJob">
+                        <li v-on:click="goToResume()">
+                        Apply Now
+                        </li>
+                    </div>
+                </div>
             </div>
         </div>
         <div>

@@ -28,7 +28,7 @@
       <br>
       <h1>You Can Make a Difference</h1>
       <div class="lookJob">
-      <li v-on:click="chStatePageToHome()"><router-link to="/Jobs">Search for a job</router-link></li>
+      <li><router-link to="/Jobs">Search for a job</router-link></li>
       </div>
     </div>
 </div>
@@ -39,7 +39,6 @@ export default {
   name: 'NavBar',
   data () {
     return {
-      statePage: 'Home'
     }
   }
 }
