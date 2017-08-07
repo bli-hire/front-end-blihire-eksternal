@@ -1587,13 +1587,14 @@
                                         </li>
                                     </ul>
                                 </div>
-
                             </div>
-                            <div class="tab-pane" role="tabpanel" id="complete" v-on:click="inputcv()">
+                            <div class="tab-pane" role="tabpanel" id="complete">
                                 <h3>Complete</h3>
                                 <p>You have successfully completed all steps.</p>
                                  <div class="btn btn-primary btn-info-full next-step">
-                                    <router-link to="/Alert">Done</router-link>
+                                     <li v-on:click="inputcv();">
+                                         Done
+                                    </li>
                                 </div>
                             </div>
                             <div class="clearfix"></div>
@@ -1782,7 +1783,9 @@ export default {
       reasonInterestedInGDN: '',
       reasonApplyOnThatPosition: '',
       factorEncaurageYouOnThatJob: '',
-      applicantStats: 'CV Recieved'}
+      applicantStats: 'CV Recieved',
+      uidLastCv: 0
+    }
   },
   beforeMount () {
   },
@@ -1935,7 +1938,7 @@ export default {
         'referencePhoneNumber': self.referencePhoneNumber2,
         'organizationalChart': ''
       }]
-      self.$http.post('http://localhost:7777/cv/add', {
+      self.$http.post('http://localhost:7777/cv/send', {
         applicantStatus: self.applicantStats,
         fullName: self.fullName,
         title: self.title,
@@ -2000,11 +2003,19 @@ export default {
         nonFrmlCrs: nonFormlCours,
         school: schl,
         socialact: socialActiv,
-        workExp: workexpc}, (json) => {
-          window.sessionStorage.setItem('cv', json)
-          this.cv = json
-          alert(this.cv)
+        workExp: workexpc}).then(response => {
+          // alert(JSON.stringify(response.data.data[0].uid))
+          this.uidLastCv = response.data.data[0].uid
+          this.goToAlert()
+        }, response => {
+          alert('error')
         })
+    },
+    goToAlert () {
+      this.$router.push({
+        path: '/Alert',
+        query: {'uid': this.uidLastCv}
+      })
     }
   }
 }

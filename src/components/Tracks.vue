@@ -9,8 +9,10 @@
                <!-- <div class="btn btn-info">
                    <router-link to="/TracksStatus">Track</router-link>
                 </div> -->
-                <div class="btn btn-info">
-                   <router-link :to="{ path: '/TrackStatus', query:{uid: this.uid}}">Track</router-link>
+                <div class="btn btn-info ">
+                 <div class="text">
+                   <router-link :to="{ path: '/TrackStatus', query:{uid: this.uid}}"><font color="white">Track</font></router-link>
+                   </div>
                 </div>
             </form>
           </div>
@@ -41,7 +43,9 @@ export default {
 h1, h2 {
   font-weight: normal;
 }
-
+.text {
+  color: white;
+}
 ul {
   list-style-type: none;
   padding: 0;

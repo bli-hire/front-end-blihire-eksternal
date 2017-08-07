@@ -1,11 +1,10 @@
 
 <template>
   <div id="app">
-
     <NavBar></NavBar>
-    
-    <!-- <img src="./assets/logo.png"> -->
-     <router-view :key="$route.fullPath"></router-view>
+    <transition name="fade">
+       <router-view ></router-view>
+    </transition>
   </div>
 </template>
 
@@ -30,7 +29,18 @@ export default {
   color: #2c3e50;
   margin-top: 0px;
 }
+.fade-enter-active, .fade-leave-active {
+  transition-property: opacity;
+  transition-duration: .25s;
+}
 
+.fade-enter-active {
+  transition-delay: .25s;
+}
+
+.fade-enter, .fade-leave-active {
+  opacity: 0
+}
 .navbar-fixed-left {
   margin-top: -20px;
   width: 140px;
