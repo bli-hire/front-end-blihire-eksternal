@@ -79,6 +79,23 @@
                                             </select>
                                         </div>
                                     </div>
+
+                                    <div class="form-group">
+                                        <label for="pwd">Department:</label>
+                                        <div>
+                                            <select class="form-control" id="sel2" v-model="jobTitle">
+                                                <option value="" disabled selected>Silahkan Pilih</option>
+                                                <option value="Talent Acquisition Specialist">Human Resource</option>
+                                                <option value="Sr. System Development Engineer">Business Development</option>
+                                                <option value="Mobile Development Engineer">Marketing</option>
+                                                <option value="Technical Support Staff">Product Mangement</option>
+                                                <option value="System Development Engineer Testing">Trade Partnership</option>
+                                                <option value="System Development Engineer">Technology</option>
+                                                <option value="Finance Administrator">Operation</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
                                     <div class="form-group">
                                         <label for="pwd">Job Title:</label>
                                         <div>
@@ -1615,6 +1632,7 @@ export default {
       msg: 'cv',
       fullName: '',
       title: '',
+      department: '',
       jobTitle: '',
       placeDateOfBirth: '',
       idCardNumber: '',
@@ -1942,6 +1960,7 @@ export default {
         applicantStatus: self.applicantStats,
         fullName: self.fullName,
         title: self.title,
+        department: self.department;
         jobTitle: self.jobTitle,
         placeDateOfBirth: self.placeDateOfBirth,
         idCardNumber: self.idCardNumber,
