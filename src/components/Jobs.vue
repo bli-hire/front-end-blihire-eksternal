@@ -6,7 +6,38 @@
         <h4>What we need</h4>
     </div>
     <div>
-        <div>
+      <div v-for="job in jobs">
+        <div class="" id="humanResourceJobs" v-if="job.department === HumanResource">
+            <div class="list-group">
+                <a class="list-group-item" data-toggle="collapse" href="#tallent">{{job.position}}</a>
+            </div>
+            <div align="left" id="tallent" class="collapse container">
+                <div class="lookJob">
+                    <li v-on:click="goToResume()">
+                        Apply Now
+                    </li>
+                </div>
+            </div>
+        </div>
+      </div>
+
+      <h4>Technology</h4>
+      <div v-for="job in jobs">
+        <div class="" id="Technology" v-if="job.department === Technology">
+            <div class="list-group">
+                <a class="list-group-item" data-toggle="collapse" href="#tallent">{{job.position}}</a>
+            </div>
+            <div align="left" id="tallent" class="collapse container">
+                <div class="lookJob">
+                    <li v-on:click="goToResume()">
+                        Apply Now
+                    </li>
+                </div>
+            </div>
+        </div>
+      </div>
+
+        <!-- <div>
             <h4>Human Resources</h4>
             <div class="list-group">
                 <a class="list-group-item" data-toggle="collapse" href="#tallent">Talent Acquisition Specialist</a>
@@ -459,7 +490,7 @@
                         </li>
                     </div>
                 </div>
-        </div>
+        </div> -->
     </div>
 
 </div>
@@ -471,8 +502,24 @@ export default {
   name: 'Jobs',
   data () {
     return {
-      statePage: 'Jobs'
+      statePage: 'Jobs',
+      jobs: {}
     }
+  },
+  beforeMount () {
+    var self = this
+    self.$http.get('localhost:8080/jobVacancy/getAll', {}, {
+      headers: {
+
+      }
+    }).then(response => {
+      if (response.data.data === '[]') {
+      } else {
+        // var job = JSON.stringify()
+        this.jobs = JSON.stringify(response.data.data)
+        // alert(job)
+      }
+    })
   },
   methods: {
     chStatePageToResume () {
