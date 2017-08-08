@@ -6,12 +6,109 @@
         <h4>What we need</h4>
     </div>
     <div>
+      <h4>Human Resource</h4>
       <div v-for="job in jobs">
-        <div class="" id="humanResourceJobs" v-if="job.department === HumanResource">
+        <div class="" :id="job.department" v-if="job.department === 'HumanResource'">
             <div class="list-group">
-                <a class="list-group-item" data-toggle="collapse" href="#tallent">{{job.position}}</a>
+                <a class="list-group-item" data-toggle="collapse" :href="'#' + job.position">{{job.position}}</a>
             </div>
-            <div align="left" id="tallent" class="collapse container">
+            <div align="left" :id="job.position" class="collapse container">
+                <div class="lookJob">
+                    <li v-on:click="goToResume()">
+                        Apply Now
+                    </li>
+                </div>
+            </div>
+        </div>
+      </div>
+
+      <h4>Product Management</h4>
+      <div v-for="job in jobs">
+        <div class="" :id="job.department" v-if="job.department === 'ProductManagement'">
+            <div class="list-group">
+                <a class="list-group-item" data-toggle="collapse" :href="'#' + job.position">{{job.position}}</a>
+            </div>
+            <div align="left" :id="job.position" class="collapse container">
+                <div class="lookJob">
+                    <li v-on:click="goToResume()">
+                        Apply Now
+                    </li>
+                </div>
+            </div>
+        </div>
+      </div>
+
+      <h4>Project Management</h4>
+      <div v-for="job in jobs">
+        <div class="" :id="job.department" v-if="job.department === 'ProjectManagement'">
+            <div class="list-group">
+                <a class="list-group-item" data-toggle="collapse" :href="'#' + job.position">{{job.position}}</a>
+            </div>
+            <div align="left" :id="job.position" class="collapse container">
+                <div class="lookJob">
+                    <li v-on:click="goToResume()">
+                        Apply Now
+                    </li>
+                </div>
+            </div>
+        </div>
+      </div>
+
+      <h4>Business Development</h4>
+      <div v-for="job in jobs">
+        <div class="" :id="job.department" v-if="job.department === 'BusinessDevelopment'">
+            <div class="list-group">
+                <a class="list-group-item" data-toggle="collapse" :href="'#' + job.position">{{job.position}}</a>
+            </div>
+            <div align="left" :id="job.position" class="collapse container">
+                <div class="lookJob">
+                    <li v-on:click="goToResume()">
+                        Apply Now
+                    </li>
+                </div>
+            </div>
+        </div>
+      </div>
+
+      <h4>Operation</h4>
+      <div v-for="job in jobs">
+        <div class="" :id="job.department" v-if="job.department === 'Operation'">
+            <div class="list-group">
+                <a class="list-group-item" data-toggle="collapse" :href="'#' + job.position">{{job.position}}</a>
+            </div>
+            <div align="left" :id="job.position" class="collapse container">
+                <div class="lookJob">
+                    <li v-on:click="goToResume()">
+                        Apply Now
+                    </li>
+                </div>
+            </div>
+        </div>
+      </div>
+
+      <h4>Trade Partnership</h4>
+      <div v-for="job in jobs">
+        <div class="" :id="job.department" v-if="job.department === 'TradePartnership'">
+            <div class="list-group">
+                <a class="list-group-item" data-toggle="collapse" :href="'#' + job.position">{{job.position}}</a>
+            </div>
+            <div align="left" :id="job.position" class="collapse container">
+                <div class="lookJob">
+                    <li v-on:click="goToResume()">
+                        Apply Now
+                    </li>
+                </div>
+            </div>
+        </div>
+      </div>
+
+      <h4>Marketing</h4>
+      <div v-for="job in jobs">
+        <div class="" :id="job.department" v-if="job.department === 'Marketing'">
+            <div class="list-group">
+                <a class="list-group-item" data-toggle="collapse" :href="'#' + job.position">{{job.position}}</a>
+            </div>
+            <div align="left" :id="job.position" class="collapse container">
                 <div class="lookJob">
                     <li v-on:click="goToResume()">
                         Apply Now
@@ -23,11 +120,27 @@
 
       <h4>Technology</h4>
       <div v-for="job in jobs">
-        <div class="" id="Technology" v-if="job.department === Technology">
+        <div class="" :id="job.department" v-if="job.department === 'Technology'">
             <div class="list-group">
-                <a class="list-group-item" data-toggle="collapse" href="#tallent">{{job.position}}</a>
+                <a class="list-group-item" data-toggle="collapse" :href="'#' + job.position">{{job.position}}</a>
             </div>
-            <div align="left" id="tallent" class="collapse container">
+            <div align="left" :id="job.position" class="collapse container">
+                <div class="lookJob">
+                    <li v-on:click="goToResume()">
+                        Apply Now
+                    </li>
+                </div>
+            </div>
+        </div>
+      </div>
+
+      <h4>Finance</h4>
+      <div v-for="job in jobs">
+        <div class="" :id="job.department" v-if="job.department === 'Finance'">
+            <div class="list-group">
+                <a class="list-group-item" data-toggle="collapse" :href="'#' + job.position">{{job.position}}</a>
+            </div>
+            <div align="left" :id="job.position" class="collapse container">
                 <div class="lookJob">
                     <li v-on:click="goToResume()">
                         Apply Now
@@ -503,12 +616,12 @@ export default {
   data () {
     return {
       statePage: 'Jobs',
-      jobs: {}
+      jobs: []
     }
   },
   beforeMount () {
     var self = this
-    self.$http.get('localhost:8080/jobVacancy/getAll', {}, {
+    self.$http.get('http://localhost:7777/jobVacancy/getAll', {}, {
       headers: {
 
       }
@@ -516,7 +629,8 @@ export default {
       if (response.data.data === '[]') {
       } else {
         // var job = JSON.stringify()
-        this.jobs = JSON.stringify(response.data.data)
+        // this.jobs = JSON.stringify(response.data.data)
+        this.jobs = response.data.data
         // alert(job)
       }
     })
