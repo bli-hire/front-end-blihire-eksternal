@@ -114,7 +114,9 @@ export default {
   beforeMount () {
     var self = this
     self.uid = self.$route.query.uid
-    self.$http.get('http://localhost:7777/cv/getCVByUid', {headers: {'uid': self.uid}},
+    if (self.uid === '') {
+    } else {
+      self.$http.get('http://localhost:7777/cv/getCVByUid', {headers: {'uid': self.uid}},
     {}, {
     }).then(response => {
       if (response.data.data === '[]') {
@@ -124,6 +126,7 @@ export default {
         self.applicantStat = JSON.parse(_appStats)
       }
     })
+    }
   }
 }
 </script>
