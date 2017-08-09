@@ -83,15 +83,15 @@
                                     <div class="form-group">
                                         <label for="pwd">Department:</label>
                                         <div>
-                                            <select class="form-control" id="sel2" v-model="jobTitle">
+                                            <select class="form-control" id="sel2" v-model="department">
                                                 <option value="" disabled selected>Silahkan Pilih</option>
-                                                <option value="Talent Acquisition Specialist">Human Resource</option>
-                                                <option value="Sr. System Development Engineer">Business Development</option>
-                                                <option value="Mobile Development Engineer">Marketing</option>
-                                                <option value="Technical Support Staff">Product Mangement</option>
-                                                <option value="System Development Engineer Testing">Trade Partnership</option>
-                                                <option value="System Development Engineer">Technology</option>
-                                                <option value="Finance Administrator">Operation</option>
+                                                <option value="HumanResource">Human Resource</option>
+                                                <option value="BusinessDevelopment">Business Development</option>
+                                                <option value="Marketing">Marketing</option>
+                                                <option value="ProductMangement">Product Mangement</option>
+                                                <option value="TradePartnership">Trade Partnership</option>
+                                                <option value="Technology">Technology</option>
+                                                <option value="Operation">Operation</option>
                                             </select>
                                         </div>
                                     </div>
@@ -100,8 +100,10 @@
                                         <label for="pwd">Job Title:</label>
                                         <div>
                                             <select class="form-control" id="sel2" v-model="jobTitle">
-                                                <option value="" disabled selected>Silahkan Pilih</option>
-                                                <option value="Talent Acquisition Specialist">Talent Acquisition Specialist</option>
+                                              <option v-for="job in jobs" v-if="department === job.department" :value="job.position">{{job.position}}</option>
+
+                                                <!-- <option value="" disabled selected>Silahkan Pilih</option> -->
+                                                <!-- <option value="Talent Acquisition Specialist">Talent Acquisition Specialist</option>
                                                 <option value="Sr. System Development Engineer">Sr. System Development Engineer</option>
                                                 <option value="Mobile Development Engineer">Mobile Development Engineer</option>
                                                 <option value="Technical Support Staff">Technical Support Staff</option>
@@ -113,7 +115,7 @@
                                                 <option value="Assistant Merchandiser">Assistant Merchandiser</option>
                                                 <option value="System Development Engineer">System Development Engineer</option>
                                                 <option value="Sr. Fleet Management Specialist">Sr. Fleet Management Specialist</option>
-                                                <option value="Fleet Management Specialist">Fleet Management Specialist</option>
+                                                <option value="Fleet Management Specialist">Fleet Management Specialist</option> -->
                                             </select>
                                         </div>
                                     </div>
@@ -260,7 +262,7 @@
                                             <button type="button" class="btn btn-warning next-step">Go</button>
                                         </li>
                                     </ul> -->
-                                    
+
                                 </form>
 
                             </div>
@@ -1032,7 +1034,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label for=""> Keterangan Notes </label>
-                                    <div>                                               
+                                    <div>
                                         <input type="text" class="form-control" id="" v-model="notesSocial2">
                                     </div>
                                 </div>
@@ -1060,7 +1062,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label for=""> Keterangan Notes </label>
-                                    <div>                                               
+                                    <div>
                                         <input type="text" class="form-control" id="" v-model="notesSocial3">
                                     </div>
                                 </div>
@@ -1802,10 +1804,25 @@ export default {
       reasonApplyOnThatPosition: '',
       factorEncaurageYouOnThatJob: '',
       applicantStats: 'CV Recieved',
-      uidLastCv: 0
+      uidLastCv: 0,
+      jobs: []
     }
   },
   beforeMount () {
+    var self = this
+    self.$http.get('http://localhost:7777/jobVacancy/getAll', {}, {
+      headers: {
+
+      }
+    }).then(response => {
+      if (response.data.data === '[]') {
+      } else {
+        // var job = JSON.stringify()
+        // this.jobs = JSON.stringify(response.data.data)
+        this.jobs = response.data.data
+        // alert(job)
+      }
+    })
   },
   methods: {
     inputcv () {
@@ -1960,7 +1977,7 @@ export default {
         applicantStatus: self.applicantStats,
         fullName: self.fullName,
         title: self.title,
-        department: self.department;
+        department: self.department,
         jobTitle: self.jobTitle,
         placeDateOfBirth: self.placeDateOfBirth,
         idCardNumber: self.idCardNumber,
