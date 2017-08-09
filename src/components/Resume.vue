@@ -1960,7 +1960,7 @@ export default {
         applicantStatus: self.applicantStats,
         fullName: self.fullName,
         title: self.title,
-        department: self.department;
+        department: self.department,
         jobTitle: self.jobTitle,
         placeDateOfBirth: self.placeDateOfBirth,
         idCardNumber: self.idCardNumber,
