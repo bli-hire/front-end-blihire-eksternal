@@ -34,7 +34,7 @@
 </div>
 </div>
 
-<div v-else-if="applicantStat === 'Process'">
+<div v-else-if="applicantStat === 'Process' || applicantStat === 'interview1' || applicantStat === 'interview2' || applicantStat === 'technicalTest' || applicantStat === 'psikoTest' ||  applicantStat === 'medicalCheckup'">
  <div class="stepwizard">
     <div class="stepwizard-row">
         <div class="stepwizard-step">
@@ -53,7 +53,7 @@
 </div>
 </div>
 
-<div v-else-if="applicantStat === 'Accepted'">
+<div v-else-if="applicantStat === 'accepted'">
  <div class="stepwizard">
     <div class="stepwizard-row">
         <div class="stepwizard-step">
