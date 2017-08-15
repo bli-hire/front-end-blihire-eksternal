@@ -11,9 +11,9 @@
         <div class="" :id="job.department" v-if="(job.department === 'HumanResource') && (job.ammount > 0)">
             <span hidden="true">{{isNullJob.HumanResource = false}}</span>
             <div class="list-group">
-                <a class="list-group-item" data-toggle="collapse" :href="'#' + job.department + this.counter++">{{job.position}}</a>
+                <a class="list-group-item" data-toggle="collapse" :href="'#' + job.department + job.id">{{job.position}}</a>
             </div>
-            <div align="left" v-bind:id="job.department + (this.counter-1)" class="collapse container-fluid">
+            <div align="left" v-bind:id="job.department + job.id" class="collapse container">
                 <div class="lookJob">
                     <li v-on:click="goToResume()">
                         Apply Now
@@ -34,9 +34,9 @@
         <div class="" :id="job.department" v-if="job.department === 'ProductManagement'  && (job.ammount > 0)">
           {{isNullJob.ProductManagement = false}}
             <div class="list-group">
-                <a class="list-group-item" data-toggle="collapse" :href="'#' + job.department + this.counter++">{{job.position}}</a>
+                <a class="list-group-item" data-toggle="collapse" :href="'#' + job.department + job.id">{{job.position}}</a>
             </div>
-            <div align="left" v-bind:id="job.department + (this.counter-1)" class="collapse container-fluid">
+            <div align="left" v-bind:id="job.department + job.id" class="collapse container">
                 <div class="lookJob">
                     <li v-on:click="goToResume()">
                         Apply Now
@@ -56,9 +56,9 @@
         <div class="" :id="job.department" v-if="job.department === 'ProjectManagement'  && (job.ammount > 0)">
           <span hidden="true">{{isNullJob.ProjectManagement = false}}</span>
             <div class="list-group">
-                <a class="list-group-item" data-toggle="collapse" :href="'#' + job.department + this.counter++">{{job.position}}</a>
+                <a class="list-group-item" data-toggle="collapse" :href="'#' + job.department + job.id">{{job.position}}</a>
             </div>
-            <div align="left" v-bind:id="job.department + (this.counter-1)" class="collapse container-fluid">
+            <div align="left" v-bind:id="job.department + job.id" class="collapse container">
                 <div class="lookJob">
                     <li v-on:click="goToResume()">
                         Apply Now
@@ -78,9 +78,9 @@
         <div class="" :id="job.department" v-if="job.department === 'BusinessDevelopment' && (job.ammount > 0)">
           <span hidden="true">{{isNullJob.BusinessDevelopment = false}}</span>
             <div class="list-group">
-                <a class="list-group-item" data-toggle="collapse" :href="'#' + job.department + this.counter++">{{job.position}}</a>
+                <a class="list-group-item" data-toggle="collapse" :href="'#' + job.department + job.id">{{job.position}}</a>
             </div>
-            <div align="left" v-bind:id="job.department + (this.counter-1)" class="collapse container-fluid">
+            <div align="left" v-bind:id="job.department + job.id" class="collapse container">
                 <div class="lookJob">
                     <li v-on:click="goToResume()">
                         Apply Now
@@ -100,9 +100,9 @@
         <div class="" :id="job.department" v-if="job.department === 'Operation' && (job.ammount > 0)">
           <span hidden="true">{{isNullJob.Operation = false}}</span>
             <div class="list-group">
-                <a class="list-group-item" data-toggle="collapse" :href="'#' + job.department + this.counter++">{{job.position}}</a>
+                <a class="list-group-item" data-toggle="collapse" :href="'#' + job.department + job.id">{{job.position}}</a>
             </div>
-            <div align="left" v-bind:id="job.department + (this.counter-1)" class="collapse container-fluid">
+            <div align="left" v-bind:id="job.department + job.id" class="collapse container">
                 <div class="lookJob">
                     <li v-on:click="goToResume()">
                         Apply Now
@@ -122,9 +122,9 @@
         <div class="" :id="job.department" v-if="job.department === 'TradePartnership' && (job.ammount > 0)">
           <span hidden="true">{{isNullJob.TradePartnership = false}}</span>
             <div class="list-group">
-                <a class="list-group-item" data-toggle="collapse" :href="'#' + job.department + this.counter++">{{job.position}}</a>
+                <a class="list-group-item" data-toggle="collapse" :href="'#' + job.department + job.id">{{job.position}}</a>
             </div>
-            <div align="left" v-bind:id="job.department + (this.counter-1)" class="collapse container-fluid">
+            <div align="left" v-bind:id="job.department + job.id" class="collapse container">
                 <div class="lookJob">
                     <li v-on:click="goToResume()">
                         Apply Now
@@ -144,9 +144,9 @@
         <div class="" :id="job.department" v-if="job.department === 'Marketing' && (job.ammount > 0)">
             <span hidden="true">{{isNullJob.Marketing = false}}</span>
             <div class="list-group">
-                <a class="list-group-item" data-toggle="collapse" :href="'#' + job.department + this.counter++">{{job.position}}</a>
+                <a class="list-group-item" data-toggle="collapse" :href="'#' + job.department + job.id">{{job.position}}</a>
             </div>
-            <div align="left" v-bind:id="job.department + (this.counter-1)" class="collapse container-fluid">
+            <div align="left" v-bind:id="job.department + job.id" class="collapse container">
                 <div class="lookJob">
                     <li v-on:click="goToResume()">
                         Apply Now
@@ -167,9 +167,9 @@
             <span hidden="true">{{isNullJob.Technology = false}}</span>
 
             <div class="list-group">
-                <a class="list-group-item" data-toggle="collapse" :href="'#' + job.department + this.counter++">{{job.position}}</a>
+                <a class="list-group-item" data-toggle="collapse" :href="'#' + job.department + job.id">{{job.position}}</a>
             </div>
-            <div align="left" v-bind:id="job.department + (this.counter-1)" class="collapse container-fluid">
+            <div align="left" v-bind:id="job.department + job.id" class="collapse container">
                 <div class="lookJob">
                     <li v-on:click="goToResume()">
                         Apply Now
@@ -190,9 +190,9 @@
             <span hidden="true">{{isNullJob.Finance = false}}</span>
 
             <div class="list-group">
-                <a class="list-group-item" data-toggle="collapse" :href="'#' + job.department + this.counter++">{{job.position}}</a>
+                <a class="list-group-item" data-toggle="collapse" :href="'#' + job.department + job.id">{{job.position}}</a>
             </div>
-            <div align="left" v-bind:id="job.department + (this.counter-1)" class="collapse container-fluid">
+            <div align="left" v-bind:id="job.department + job.id" class="collapse container">
                 <div class="lookJob">
                     <li v-on:click="goToResume()">
                         Apply Now
