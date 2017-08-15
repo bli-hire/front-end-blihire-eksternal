@@ -689,7 +689,7 @@ export default {
   },
   beforeMount () {
     var self = this
-    self.$http.get('http://localhost:7777/jobVacancy/getAll', {}, {
+    self.$http.get('http://localhost:8080/jobVacancy/getAll', {}, {
       headers: {
 
       }

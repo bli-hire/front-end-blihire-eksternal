@@ -3,7 +3,7 @@
  <div class="TracksStatus">
 
  <div class="alert alert-success" align="center">
-    <strong>Status</strong> 
+    <strong>Status</strong>
   </div>
   <div class="text-center">
     <h2>Your Apply Number :</h2>
@@ -13,7 +13,7 @@
     <h4>{{uid}}</h4>
   </div>
   <br/><br/></br>
- 
+
 
   <div v-if="applicantStat === 'CV Recieved'">
   <div class="stepwizard">
@@ -34,7 +34,7 @@
 </div>
 </div>
 
-<div v-else-if="applicantStat === 'Process'">
+<div v-else-if="applicantStat === 'Process' || applicantStat === 'interview1' || applicantStat === 'interview2' || applicantStat === 'technicalTest' || applicantStat === 'psikoTest' ||  applicantStat === 'medicalCheckup'">
  <div class="stepwizard">
     <div class="stepwizard-row">
         <div class="stepwizard-step">
@@ -48,12 +48,12 @@
         <div class="stepwizard-step">
             <button type="button" class="btn btn-default btn-circle" disabled="disabled">3</button>
             <p>Accepted/ Rejected</p>
-        </div>  
+        </div>
     </div>
 </div>
 </div>
 
-<div v-else-if="applicantStat === 'Accepted'">
+<div v-else-if="applicantStat === 'accepted'">
  <div class="stepwizard">
     <div class="stepwizard-row">
         <div class="stepwizard-step">
@@ -67,7 +67,7 @@
         <div class="stepwizard-step">
             <button type="button" class="btn btn-primary btn-circle" disabled="disabled">3</button>
             <p>Accepted</p>
-        </div> 
+        </div>
     </div>
 </div>
 </div>
@@ -86,13 +86,13 @@
         <div class="stepwizard-step">
             <button type="button" class="btn btn-primary btn-circle" disabled="disabled">3</button>
             <p>Rejected</p>
-        </div> 
-        
+        </div>
+
     </div>
 </div>
 </div>
 
-<div v-else class="text">  
+<div v-else class="text">
 <h3>Uid is invalid</h3>
 </div>
   </div>
@@ -116,7 +116,7 @@ export default {
     self.uid = self.$route.query.uid
     if (self.uid === '') {
     } else {
-      self.$http.get('http://localhost:7777/cv/getCVByUid', {headers: {'uid': self.uid}},
+      self.$http.get('http://localhost:8080/cv/getCVByUid', {headers: {'uid': self.uid}},
     {}, {
     }).then(response => {
       if (response.data.data === '[]') {
@@ -136,7 +136,7 @@ export default {
 body{margin:40px;}
 
 .stepwizard-step p {
-    margin-top: 10px;    
+    margin-top: 10px;
 }
 
 .stepwizard-row {
@@ -144,7 +144,7 @@ body{margin:40px;}
 }
 
 .stepwizard {
-    display: table;     
+    display: table;
     width: 100%;
     position: relative;
 }
@@ -163,10 +163,10 @@ body{margin:40px;}
     height: 1px;
     background-color: #ccc;
     z-order: 0;
-    
+
 }
 
-.stepwizard-step {    
+.stepwizard-step {
     display: table-cell;
     text-align: center;
     position: relative;
