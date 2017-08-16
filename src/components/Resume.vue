@@ -1810,7 +1810,7 @@ export default {
   },
   beforeMount () {
     var self = this
-    self.$http.get('http://localhost:7777/jobVacancy/getAll', {}, {
+    self.$http.get('http://localhost:8080/jobVacancy/getAll', {}, {
       headers: {
 
       }
@@ -1973,7 +1973,7 @@ export default {
         'referencePhoneNumber': self.referencePhoneNumber2,
         'organizationalChart': ''
       }]
-      self.$http.post('http://localhost:7777/cv/send', {
+      self.$http.post('http://localhost:8080/cv/send', {
         applicantStatus: self.applicantStats,
         fullName: self.fullName,
         title: self.title,
