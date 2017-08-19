@@ -15,7 +15,7 @@
   <br/><br/></br>
 
 
-  <div v-if="applicantStat === 'CV Recieved'">
+  <div v-if="applicantStat === 'CV Received'">
   <div class="stepwizard">
     <div class="stepwizard-row">
         <div class="stepwizard-step">
