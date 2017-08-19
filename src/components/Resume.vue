@@ -13,7 +13,6 @@
                                     <span class="round-tab">
                                          <i class="glyphicon glyphicon-folder-open"></i>
                                     </span>
-
                                 </a>
                             </li>
                             <li role="presentation" class="disabled">
