@@ -8,123 +8,168 @@
     <div>
       <h4>Human Resource</h4>
       <div v-for="job in jobs">
-        <div class="" :id="job.department" v-if="job.department === 'HumanResource'">
+        <div class="" :id="job.department" v-if="(job.department === 'HumanResource') && (job.ammount > 0)">
+            <span hidden="true">{{isNullJob.HumanResource = false}}</span>
             <div class="list-group">
-                <a class="list-group-item" data-toggle="collapse" :href="'#' + job.position">{{job.position}}</a>
+                <a class="list-group-item" data-toggle="collapse" :href="'#' + job.department + job.id">{{job.position}}</a>
             </div>
-            <div align="left" :id="job.position" class="collapse container">
+            <div align="left" v-bind:id="job.department + job.id" class="collapse container">
                 <div class="lookJob">
                     <li v-on:click="goToResume()">
                         Apply Now
                     </li>
                 </div>
             </div>
+        </div>
+
+      </div>
+      <div class="" v-if="isNullJob.HumanResource === true">
+        <div class="list-group">
+          <div class="list-group-item not-available">No Job Available</div>
         </div>
       </div>
 
       <h4>Product Management</h4>
       <div v-for="job in jobs">
-        <div class="" :id="job.department" v-if="job.department === 'ProductManagement'">
+        <div class="" :id="job.department" v-if="job.department === 'ProductManagement'  && (job.ammount > 0)">
+          {{isNullJob.ProductManagement = false}}
             <div class="list-group">
-                <a class="list-group-item" data-toggle="collapse" :href="'#' + job.position">{{job.position}}</a>
+                <a class="list-group-item" data-toggle="collapse" :href="'#' + job.department + job.id">{{job.position}}</a>
             </div>
-            <div align="left" :id="job.position" class="collapse container">
+            <div align="left" v-bind:id="job.department + job.id" class="collapse container">
                 <div class="lookJob">
                     <li v-on:click="goToResume()">
                         Apply Now
                     </li>
                 </div>
             </div>
+        </div>
+      </div>
+      <div class="" v-if="isNullJob.ProductManagement === true">
+        <div class="list-group">
+            <div class="list-group-item not-available">No Job Available</div>
         </div>
       </div>
 
       <h4>Project Management</h4>
       <div v-for="job in jobs">
-        <div class="" :id="job.department" v-if="job.department === 'ProjectManagement'">
+        <div class="" :id="job.department" v-if="job.department === 'ProjectManagement'  && (job.ammount > 0)">
+          <span hidden="true">{{isNullJob.ProjectManagement = false}}</span>
             <div class="list-group">
-                <a class="list-group-item" data-toggle="collapse" :href="'#' + job.position">{{job.position}}</a>
+                <a class="list-group-item" data-toggle="collapse" :href="'#' + job.department + job.id">{{job.position}}</a>
             </div>
-            <div align="left" :id="job.position" class="collapse container">
+            <div align="left" v-bind:id="job.department + job.id" class="collapse container">
                 <div class="lookJob">
                     <li v-on:click="goToResume()">
                         Apply Now
                     </li>
                 </div>
             </div>
+        </div>
+      </div>
+      <div class="" v-if="isNullJob.ProjectManagement === true">
+        <div class="list-group">
+          <div class="list-group-item not-available">No Job Available</div>
         </div>
       </div>
 
       <h4>Business Development</h4>
       <div v-for="job in jobs">
-        <div class="" :id="job.department" v-if="job.department === 'BusinessDevelopment'">
+        <div class="" :id="job.department" v-if="job.department === 'BusinessDevelopment' && (job.ammount > 0)">
+          <span hidden="true">{{isNullJob.BusinessDevelopment = false}}</span>
             <div class="list-group">
-                <a class="list-group-item" data-toggle="collapse" :href="'#' + job.position">{{job.position}}</a>
+                <a class="list-group-item" data-toggle="collapse" :href="'#' + job.department + job.id">{{job.position}}</a>
             </div>
-            <div align="left" :id="job.position" class="collapse container">
+            <div align="left" v-bind:id="job.department + job.id" class="collapse container">
                 <div class="lookJob">
                     <li v-on:click="goToResume()">
                         Apply Now
                     </li>
                 </div>
             </div>
+        </div>
+      </div>
+      <div class="" v-if="isNullJob.BusinessDevelopment === true">
+        <div class="list-group">
+          <div class="list-group-item not-available">No Job Available</div>
         </div>
       </div>
 
       <h4>Operation</h4>
       <div v-for="job in jobs">
-        <div class="" :id="job.department" v-if="job.department === 'Operation'">
+        <div class="" :id="job.department" v-if="job.department === 'Operation' && (job.ammount > 0)">
+          <span hidden="true">{{isNullJob.Operation = false}}</span>
             <div class="list-group">
-                <a class="list-group-item" data-toggle="collapse" :href="'#' + job.position">{{job.position}}</a>
+                <a class="list-group-item" data-toggle="collapse" :href="'#' + job.department + job.id">{{job.position}}</a>
             </div>
-            <div align="left" :id="job.position" class="collapse container">
+            <div align="left" v-bind:id="job.department + job.id" class="collapse container">
                 <div class="lookJob">
                     <li v-on:click="goToResume()">
                         Apply Now
                     </li>
                 </div>
             </div>
+        </div>
+      </div>
+      <div class="" v-if="isNullJob.Operation === true">
+        <div class="list-group">
+          <div class="list-group-item not-available">No Job Available</div>
         </div>
       </div>
 
       <h4>Trade Partnership</h4>
       <div v-for="job in jobs">
-        <div class="" :id="job.department" v-if="job.department === 'TradePartnership'">
+        <div class="" :id="job.department" v-if="job.department === 'TradePartnership' && (job.ammount > 0)">
+          <span hidden="true">{{isNullJob.TradePartnership = false}}</span>
             <div class="list-group">
-                <a class="list-group-item" data-toggle="collapse" :href="'#' + job.position">{{job.position}}</a>
+                <a class="list-group-item" data-toggle="collapse" :href="'#' + job.department + job.id">{{job.position}}</a>
             </div>
-            <div align="left" :id="job.position" class="collapse container">
+            <div align="left" v-bind:id="job.department + job.id" class="collapse container">
                 <div class="lookJob">
                     <li v-on:click="goToResume()">
                         Apply Now
                     </li>
                 </div>
             </div>
+        </div>
+      </div>
+      <div class="" v-if="isNullJob.TradePartnership === true">
+        <div class="list-group">
+          <div class="list-group-item not-available">No Job Available</div>
         </div>
       </div>
 
       <h4>Marketing</h4>
       <div v-for="job in jobs">
-        <div class="" :id="job.department" v-if="job.department === 'Marketing'">
+        <div class="" :id="job.department" v-if="job.department === 'Marketing' && (job.ammount > 0)">
+            <span hidden="true">{{isNullJob.Marketing = false}}</span>
             <div class="list-group">
-                <a class="list-group-item" data-toggle="collapse" :href="'#' + job.position">{{job.position}}</a>
+                <a class="list-group-item" data-toggle="collapse" :href="'#' + job.department + job.id">{{job.position}}</a>
             </div>
-            <div align="left" :id="job.position" class="collapse container">
+            <div align="left" v-bind:id="job.department + job.id" class="collapse container">
                 <div class="lookJob">
                     <li v-on:click="goToResume()">
                         Apply Now
                     </li>
                 </div>
             </div>
+        </div>
+      </div>
+      <div class="" v-if="isNullJob.Marketing === true">
+        <div class="list-group">
+          <div class="list-group-item not-available">No Job Available</div>
         </div>
       </div>
 
       <h4>Technology</h4>
       <div v-for="job in jobs">
-        <div class="" :id="job.department" v-if="job.department === 'Technology'">
+        <div class="" :id="job.department" v-if="job.department === 'Technology' && (job.ammount > 0)">
+            <span hidden="true">{{isNullJob.Technology = false}}</span>
+
             <div class="list-group">
-                <a class="list-group-item" data-toggle="collapse" :href="'#' + job.position">{{job.position}}</a>
+                <a class="list-group-item" data-toggle="collapse" :href="'#' + job.department + job.id">{{job.position}}</a>
             </div>
-            <div align="left" :id="job.position" class="collapse container">
+            <div align="left" v-bind:id="job.department + job.id" class="collapse container">
                 <div class="lookJob">
                     <li v-on:click="goToResume()">
                         Apply Now
@@ -133,20 +178,32 @@
             </div>
         </div>
       </div>
+      <div class="" v-if="isNullJob.Technology === true">
+        <div class="list-group">
+          <div class="list-group-item not-available">No Job Available</div>
+        </div>
+      </div>
 
       <h4>Finance</h4>
       <div v-for="job in jobs">
-        <div class="" :id="job.department" v-if="job.department === 'Finance'">
+        <div class="" :id="job.department" v-if="job.department === 'Finance' && (job.ammount > 0)">
+            <span hidden="true">{{isNullJob.Finance = false}}</span>
+
             <div class="list-group">
-                <a class="list-group-item" data-toggle="collapse" :href="'#' + job.position">{{job.position}}</a>
+                <a class="list-group-item" data-toggle="collapse" :href="'#' + job.department + job.id">{{job.position}}</a>
             </div>
-            <div align="left" :id="job.position" class="collapse container">
+            <div align="left" v-bind:id="job.department + job.id" class="collapse container">
                 <div class="lookJob">
                     <li v-on:click="goToResume()">
                         Apply Now
                     </li>
                 </div>
             </div>
+        </div>
+      </div>
+      <div class="" v-if="isNullJob.Finance === true">
+        <div class="list-group">
+          <div class="list-group-item not-available">No Job Available</div>
         </div>
       </div>
 
@@ -616,12 +673,24 @@ export default {
   data () {
     return {
       statePage: 'Jobs',
-      jobs: []
+      jobs: [],
+      isNullJob: {
+        HumanResource: true,
+        Technology: true,
+        Finance: true,
+        Marketing: true,
+        TradePartnership: true,
+        Operation: true,
+        ProjectManagement: true,
+        ProductManagement: true,
+        BusinessDevelopment: true
+      },
+      counter: 1
     }
   },
   beforeMount () {
     var self = this
-    self.$http.get('http://localhost:7777/jobVacancy/getAll', {}, {
+    self.$http.get('http://localhost:8080/jobVacancy/getAll', {}, {
       headers: {
 
       }
@@ -661,5 +730,9 @@ li {
 
 a {
   color: #42b983;
+}
+
+.not-available {
+  color: red;
 }
 </style>
