@@ -20,7 +20,7 @@
     <div class="stepwizard-row">
         <div class="stepwizard-step">
             <button type="button" class="btn btn-primary btn-circle" disabled="disabled">1</button>
-            <p>CV Recieved</p>
+            <p>CV Received</p>
         </div>
         <div class="stepwizard-step">
             <button type="button" class="btn btn-default btn-circle" disabled="disabled">2</button>
@@ -39,7 +39,7 @@
     <div class="stepwizard-row">
         <div class="stepwizard-step">
             <button type="button" class="btn btn-default btn-circle" disabled="disabled">1</button>
-            <p>CV Recieved</p>
+            <p>CV Received</p>
         </div>
         <div class="stepwizard-step">
             <button type="button" class="btn btn-primary btn-circle" disabled="disabled">2</button>
@@ -58,7 +58,7 @@
     <div class="stepwizard-row">
         <div class="stepwizard-step">
             <button type="button" class="btn btn-default btn-circle" disabled="disabled">1</button>
-            <p>CV Recieved</p>
+            <p>CV Received</p>
         </div>
         <div class="stepwizard-step">
             <button type="button" class="btn btn-default btn-circle" disabled="disabled">2</button>
@@ -77,7 +77,7 @@
     <div class="stepwizard-row">
         <div class="stepwizard-step">
             <button type="button" class="btn btn-default btn-circle" disabled="disabled">1</button>
-            <p>CV Recieved</p>
+            <p>CV Received</p>
         </div>
         <div class="stepwizard-step">
             <button type="button" class="btn btn-default btn-circle" disabled="disabled">2</button>
