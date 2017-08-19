@@ -1803,7 +1803,7 @@ export default {
       reasonInterestedInGDN: '',
       reasonApplyOnThatPosition: '',
       factorEncaurageYouOnThatJob: '',
-      applicantStats: 'CV Recieved',
+      applicantStats: 'CV Received',
       uidLastCv: 0,
       jobs: []
     }
