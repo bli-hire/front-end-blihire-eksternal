@@ -159,7 +159,7 @@
                                             <input type="email" class="form-control" id="email" v-model="emailAddress" placeholder="Email">
                                         </div>
                                     </div>
-                                    <div class="form-group">
+                                    <!-- <div class="form-group">
                                         <label for="cv">Upload CV (pdf):</label>
                                         <div>
                                             <label class="btn btn-default btn-file">
@@ -167,7 +167,14 @@
                                                 <input type="file" style="display: none;">
                                             </label>
                                         </div>
-                                    </div>
+                                    </div> -->
+                                    <form id="upload-file-form">
+                                      <label for="upload-file-input">Upload your CV (pdf):</label>
+                                      <input id="upload-file-input" type="file" name="uploadfile" accept="*" />
+                                      <br />
+                                      <span id="upload-file-message"></span>
+                                    </form>
+
                                     <div class="form-group">
                                         <label for="twitter">Twitter</label>
                                         <div>
@@ -1377,7 +1384,7 @@
                                     </div>
                                 </div>
 
-                                <div class="form-group">
+                                <!-- <div class="form-group">
                                     <label for="cv">Upload gambar struktur organisasi(organizational chart):</label>
                                     <div>
                                         <label class="btn btn-default btn-file">
@@ -1385,7 +1392,13 @@
                                             <input type="file" style="display: none;">
                                         </label>
                                     </div>
-                                </div>
+                                </div> -->
+                                <form id="upload-file-form">
+                                  <label for="upload-file-input">Upload gambar struktur organisasi(organizational chart):</label>
+                                  <input id="upload-file-input" type="file" name="uploadfile" accept="*" />
+                                  <br />
+                                  <span id="upload-file-message"></span>
+                                </form>
 
                                 <h5>Data ke 2</h5>
 
@@ -1461,7 +1474,7 @@
                                     </div>
                                 </div>
 
-                                <div class="form-group">
+                                <!-- <div class="form-group">
                                     <label for="cv">Upload gambar struktur organisasi(organizational chart):</label>
                                     <div>
                                         <label class="btn btn-default btn-file">
@@ -1469,7 +1482,14 @@
                                             <input type="file" style="display: none;">
                                         </label>
                                     </div>
-                                </div>
+                                </div> -->
+                                <form id="upload-file-form">
+                                  <label for="upload-file-input">Upload your file:</label>
+                                  <input id="upload-file-input" type="file" name="uploadfile" accept="*" />
+                                  <br />
+                                  <span id="upload-file-message"></span>
+                                </form>
+
                                 <ul class="list-inline pull-right">
                                     <li>
                                         <button type="button" class="btn btn-default prev-step">Previous</button>
